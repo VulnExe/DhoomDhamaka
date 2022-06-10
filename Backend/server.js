@@ -1,2 +1,1 @@
-//this is server file
-nfkweflsdjl
+hii frnds
