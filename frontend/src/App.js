@@ -1,11 +1,11 @@
 import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css"
-import Home from './components/home'
+import Home from './components/home/home'
 import Navbar from './components/navbar';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
-import Login from './components/login'
-import Register from './components/register'
-
+import Login from './components/Login/login'
+import Register from './components/Register/register'
+import Account from './components/Myprofile/account';
 
 function App() {
   return (
@@ -23,6 +23,10 @@ function App() {
        <Route path="/register">
             <Register/>
        </Route>
+       <Route path="/myacc">
+            <Account/>
+       </Route>
+
       </Switch>
      
    </div>
