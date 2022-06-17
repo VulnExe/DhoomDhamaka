@@ -57,11 +57,7 @@ export default function Becomevendor() {
                                 <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
                             </div>
                         </div>
-                    </div>
-                    <div class="input-group">
-                        <input class="input--style-1" type="password" placeholder="Password" name="name"></input>
-                    </div>
-                    
+                    </div>                 
                     
                     <div class="p-t-20">
                         <button class="btn btn--radius btn--green" type="submit">Submit</button>

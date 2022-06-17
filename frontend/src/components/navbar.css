@@ -75,7 +75,7 @@ li {
   font-size: 26px;
   font-weight: 400;
   text-transform: uppercase;
-  background: -webkit-linear-gradient(#eee, rgb(69, 57, 248));
+  background: -webkit-linear-gradient(#eee, red);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -96,7 +96,7 @@ li {
 }
 .menu-link ul li:hover > a {
   transform-origin: left;
-  color: rgba(0, 0, 3, 1);
+  color: red;
   text-decoration: underline;
   transition: 0.5s;
 }
