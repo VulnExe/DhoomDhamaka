@@ -40,8 +40,9 @@ const vendorSchema = new mongoose.Schema({
         minlength : 5,
         maxlength : 200,
         unique : true
-    },
-    
+    }
 },{
     timestamps:true
 })
+
+

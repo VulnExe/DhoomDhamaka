@@ -2,6 +2,10 @@ import React from 'react'
 import "./becomevendor.css"
 
 export default function Becomevendor() {
+      
+    
+
+
   return (
     <div class="page-wrapper bg-blue p-t-100 p-b-100 font-robo">
     <div class="wrapper wrapper--w680">
