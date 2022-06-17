@@ -4,11 +4,22 @@ import React, { useEffect, useState } from "react";
 export default function Home() {
   const [hmV, sethmV] = useState("Home Page")
   // hmV = "Home Page";
+  axios
+  .get("/api/home")
+  .then((res) => {
+    sethmV("Authheenticated,  Home page varuthu")
+  })
+  .catch((err) => {
+    console.log(err);
+    sethmV("Error vanthruchuuu")
+  });
+
   function getLogin() {
     console.log("loggg");
     axios
       .get("/api/home")
       .then((res) => {
+        console.log(res);
         sethmV("Authheenticated")
       })
       .catch((err) => {
@@ -16,6 +27,8 @@ export default function Home() {
         sethmV("Error vanthruchuuu")
       });
   }
+
+
 
   function doLogout(){
     axios.get("api/login/logout").then((res) => {
@@ -28,11 +41,8 @@ export default function Home() {
 
   return (
     <div>
-      <h1>{hmV}</h1>
-      <br></br>
-      <button onClick={getLogin}>Get Login Status</button><br></br>
-      <br></br>
-      <button onClick={doLogout}>Logout</button>
+      <h1>Home Page </h1>
     </div>
+    
   );
 }

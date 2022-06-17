@@ -6,6 +6,7 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import Login from './components/Login/login'
 import Register from './components/Register/register'
 import Account from './components/Myprofile/account';
+import Events from './components/Events/events'
 
 function App() {
   return (
@@ -16,6 +17,9 @@ function App() {
       <Switch>
       <Route exact path="/">
             <Home/> 
+       </Route>
+       <Route path="/events">
+            <Events/> 
        </Route>
        <Route path="/login">
             <Login/>
