@@ -36,8 +36,8 @@ router.post("/", async (req, res) => {
   res
     // .cookie("Token", token, {expires: new Date(Date.now() + 10000), httpOnly: true })
     .cookie("Token", token, {expires: new Date(Date.now() +  86400000), httpOnly: true })
-    .send("cookie stted");
-    
+    .send("cookie setted");
+
   
     // res.send(token)
 });

@@ -1,6 +1,9 @@
 import React, { useReducer } from "react";
 import axios from 'axios'
 import "./login.css";
+import { useHistory } from 'react-router-dom'
+import { GiEclipseFlare } from "react-icons/gi";
+
 
 function LoginReducer(state, action) {
   switch (action.type) {
@@ -27,7 +30,7 @@ const initialState = {
 
 export default function Login() {
   const [state, dispatch] = useReducer(LoginReducer, initialState);
-
+  const history = useHistory()
   const { username, email, password } = state;
 
   const handleChange = (e) => {
@@ -44,17 +47,21 @@ export default function Login() {
     e.preventDefault();
     // console.log(username);
     let { password, email } = state;
+    
 
     e.preventDefault();
+    
     axios
       .post("api/login", { email, password })
       .then((res) => {
-        // console.log(res.data);
-        // console.log("goy it..!");
-        console.log(res.data);
+        if(res.status ===200){
+          history.push("/");
+        }
+        
       })
       .catch((err) => {
           console.log(err);
+          history.push("/login")
       });
   }
 
@@ -65,6 +72,7 @@ export default function Login() {
       .get("api/login")
       .then((res) => {
         console.log(res.data);
+        
       })
       .catch((err) => {
         console.log(err);

@@ -61,10 +61,10 @@ const Navbar = () => {
               <NavLink to="/becomeVendor">Become a vendor</NavLink>
             </li>
             <li>
-              <NavLink to="/Login">Login</NavLink>
+              <NavLink to="/login">Login</NavLink>
             </li>
             <li>
-              <NavLink to="/Register">Register</NavLink>
+              <NavLink to="/register">Register</NavLink>
             </li>
           </ul>
         </div>
