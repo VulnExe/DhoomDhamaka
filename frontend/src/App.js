@@ -5,6 +5,8 @@ import Navbar from './components/navbar';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import Login from './components/Login/login'
 import Register from './components/Register/register'
+import Passwordreset from './components/passwordReset/passwordReset'
+import NewPassword from './components/newPassword/newPassword';
 import Account from './components/Myprofile/account';
 import Events from './components/Event/events'
 import Becomevendor from './components/BecomeVendor/becomevendor';
@@ -36,6 +38,12 @@ function App() {
        </Route>
        <Route path="/register">
             <Register/>
+       </Route>
+       <Route path="/passwordReset">
+            <Passwordreset />
+       </Route>
+       <Route path="/newPassword/:resetTok">
+            <NewPassword />
        </Route>
        <Route path="/becomevendor">
             <Becomevendor/>

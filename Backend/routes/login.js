@@ -10,7 +10,7 @@ const { User} = require('../model/user')
 router.get("/", (req,res) => {
   const tok = req.cookies.Token
   console.log("myToken : " + tok);
-})
+})  
 
 router.post("/", async (req, res) => {
     console.log(req.body);

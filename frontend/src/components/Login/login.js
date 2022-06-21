@@ -1,8 +1,7 @@
 import React, { useReducer } from "react";
 import axios from 'axios'
 import "./login.css";
-import { useHistory } from 'react-router-dom'
-import { GiEclipseFlare } from "react-icons/gi";
+import { NavLink, useHistory } from 'react-router-dom'
 
 
 function LoginReducer(state, action) {
@@ -114,7 +113,7 @@ export default function Login() {
             </button>
           </div>
           <p className="forgot-password text-right mt-2">
-            Forgot <a href="#">password?</a>
+            Forgot <NavLink to="/passwordReset">Password</NavLink> 
           </p>
         </div>
       </form>
