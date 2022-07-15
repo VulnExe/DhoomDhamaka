@@ -11,8 +11,8 @@ const { User } = require("../model/user");
 var transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    user: "vasanthsurya470@gmail.com",
-    pass: "uuynijqfkgxmyxkj",
+    user: "trickyman4vs@gmail.com",
+    pass: "gtypecjnknkflxcn",
   },
 });
 
@@ -28,7 +28,7 @@ router.post("/", (req, res) => {
     }
 
     //storing it in token and converting to str from hex
-    console.log(req.body.email);
+    // console.log(req.body.email);
     const tokenReset = buffer.toString("hex");
     User.findOne({ email: req.body.email }).then((user) => {
       if (!user) {
@@ -36,27 +36,45 @@ router.post("/", (req, res) => {
           .status(422)
           .json({ error: "user doesn't exists with that email" });
       }
-      //if user avail means assign values
-      user.resetToken = tokenReset;
-      user.expireToken = Date.now() + 360000;
+    // if user avail means assign values
+    user.resetToken = tokenReset;
+    user.expireToken = Date.now() + 360000;
 
-      //saving this items and sending mail using nodemailer
+    // saving this items and sending mail using nodemailer
 
-      user.save().then((result) => {
-        var emailCnt = {
-          from: "no-reply@bandhan.com",
-          to: user.email,
-          subject: "Password Reset Mail @Bandhan",
-          html: `<p>You requested for Password Reset</p>
-          <h1><a href="http://localhost:3000/newPassword/${tokenReset}">click here </a>to reset password</h1>`,
-        };
-        transporter.sendMail(emailCnt, (error, info) => {
-          if (error) {
-            return console.log(error + "hii err");
-          }
-          console.log("Message sent: %s", info.messageId);
-        });
-      });
+    user.save().then((result) => {
+
+    var emailCnt ={
+      from :"trickyman4vs@gmail.com",
+      to : req.body.email,
+      subject : "Bandhan app...?",
+      text : "your are requested to password reset...!"
+    }
+
+    var emailCnt2 = {
+      from: "passwordReset@gmail.com",
+      to: req.body.email,
+      subject: "Password Reset Mail @Bandhan",
+      text: "Hello. This email is for your email verification.",
+      html: `<p>this is suya to inform the mail</p>
+         <p><a href="http://localhost:3000/newPassword/${tokenReset}">click here </a>to reset password</p>`,
+    };
+
+
+    transporter.sendMail(emailCnt, (error, info) => {
+      if (error) {
+        return console.log(error + "hii err");
+      }
+      console.log("Message sent: %s", info.messageId);
+      transporter.sendMail(emailCnt2, (error, info) => {
+        if(error){
+          return console.log(error + "2 err");
+        }else{
+          console.log("message sent");
+        }
+      })
+    });
+    });
     });
   });
 });

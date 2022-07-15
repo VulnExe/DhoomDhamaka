@@ -6,6 +6,7 @@ const bcrypt = require('bcrypt')
 const Joi = require('joi')
 const _ = require('lodash')
 const { User} = require('../model/user')
+const logout = require('../controllers/user-controller')
 
 router.get("/", (req,res) => {
   const tok = req.cookies.Token
@@ -32,20 +33,19 @@ router.post("/", async (req, res) => {
   const token = user.generateAuthToken();
 
   const foundUser = _.pick(user, ["_id", "username", "email"]);
-  console.log(token);
+  // console.log(token);
+  console.log(new Date(Date.now()));
   res
-    // .cookie("Token", token, {expires: new Date(Date.now() + 10000), httpOnly: true })
-    .cookie("Token", token, {expires: new Date(Date.now() +  86400000), httpOnly: true })
-    .send("cookie setted");
-
-  
-    // res.send(token)
+    // .cookie("Token", token, {expires: new Date(Date.now() + 10000), httpOnly: true })//86400000
+    .cookie("bandhanUserToken", token, {expires: new Date(Date.now() + 19800000 + 120000 ) , httpOnly: true, sameSite:'none', secure: true })
+    .status(200).json({ message: " Logged In SuccessFully", jsonToken : token})
+     
 });
 
 //for logout
 
-router.get("/logout", (req,res) => {
-  res.clearCookie("Token").send("Logged Out")
+router.get("/user", logout, (req,res)=>{
+  console.log("req rec logout");
 })
 
 

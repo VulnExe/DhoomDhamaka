@@ -1,13 +1,13 @@
 import React, { useReducer } from "react";
-import axios from 'axios'
+import axios from "axios";
 import "./login.css";
-import { NavLink, useHistory } from 'react-router-dom'
+import { NavLink, useNavigate } from "react-router-dom";
+import { authActions } from "../../store";
 
-
+import { useDispatch } from "react-redux";
 function LoginReducer(state, action) {
   switch (action.type) {
     case "field": {
-      // console.log("hii");
       return {
         ...state,
         [action.fieldName]: action.payload,
@@ -22,14 +22,12 @@ const initialState = {
   username: "",
   email: "",
   password: "",
-  // isLoading: false,
-  // error: "",
-  // isLoggedIn: false
 };
 
 export default function Login() {
+  const disspatch = useDispatch();
+  const navigate = useNavigate();
   const [state, dispatch] = useReducer(LoginReducer, initialState);
-  const history = useHistory()
   const { username, email, password } = state;
 
   const handleChange = (e) => {
@@ -38,29 +36,28 @@ export default function Login() {
       fieldName: e.target.name,
       payload: e.target.value,
     });
-    // console.log(e.target.name + " : " + e.target.value);
   };
   axios.defaults.withCredentials = true;
 
   function handleLogin(e) {
     e.preventDefault();
-    // console.log(username);
     let { password, email } = state;
-    
 
     e.preventDefault();
-    
+
     axios
       .post("api/login", { email, password })
       .then((res) => {
-        if(res.status ===200){
-          history.push("/");
-        }
-        
+        const lctTok = res.data.jsonToken;
+        console.log(res);
+        localStorage.setItem("bandhanUserToken", lctTok);
+        disspatch(authActions.login());
+        navigate("/events");
       })
+
       .catch((err) => {
-          console.log(err);
-          history.push("/login")
+        console.log(err);
+        navigate("/login");
       });
   }
 
@@ -71,7 +68,6 @@ export default function Login() {
       .get("api/login")
       .then((res) => {
         console.log(res.data);
-        
       })
       .catch((err) => {
         console.log(err);
@@ -113,7 +109,7 @@ export default function Login() {
             </button>
           </div>
           <p className="forgot-password text-right mt-2">
-            Forgot <NavLink to="/passwordReset">Password</NavLink> 
+            Forgot <NavLink to="/passwordReset">Password</NavLink>
           </p>
         </div>
       </form>

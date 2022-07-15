@@ -1,8 +1,9 @@
 import axios from "axios";
+
 import React, { useEffect, useState } from "react";
 
 export default function Home() {
-  const [hmV, sethmV] = useState("Home Page")
+  // const [hmV, sethmV] = useState("Home Page")
   // hmV = "Home Page";
 
   // function getLogin() {
@@ -32,7 +33,7 @@ export default function Home() {
 
   return (
     <div>
-      <h1>Home Page </h1>
+      <h1>Home</h1>
     </div>
     
   );

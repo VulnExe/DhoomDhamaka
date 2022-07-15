@@ -11,6 +11,7 @@ router.post("/", async (req, res) => {
   const reqToken = req.body.token;
   const newPassword = req.body.password;
   console.log(newPassword);
+
   //checking token is in req
 
   if (!reqToken) {

@@ -1,5 +1,6 @@
 import React, { useReducer, useState } from "react";
 import axios from "axios";
+import { Navigate, useNavigate } from "react-router-dom";
 
 function LoginReducer(state, action) {
   switch (action.type) {
@@ -24,12 +25,10 @@ const initialState = {
   // isLoggedIn: false
 };
 
-
 // export default function (props) {
 export default function Register() {
-
   const [state, dispatch] = useReducer(LoginReducer, initialState);
-
+  const navigate = useNavigate();
   const { username, email, password } = state;
 
   const handleChange = (e) => {
@@ -51,9 +50,8 @@ export default function Register() {
     axios
       .post("api/login", { email, password })
       .then((res) => {
-        // console.log(res.data);
-        // console.log("goy it..!");
         console.log(res.data);
+        // console.log("goy it..!");
       })
       .catch((err) => {
         console.log(err);
@@ -82,7 +80,10 @@ export default function Register() {
       .post("api/register", { username, email, password })
       .then((res) => {
         // console.log(res.data);
-        console.log(res.data);
+        if (res.status == 200) {
+          console.log("user registered successfully");
+          navigate("/login");
+        }
       })
       .catch((err) => {
         console.log(err);
@@ -95,7 +96,7 @@ export default function Register() {
     setAuthMode(authMode === "signin" ? "signup" : "signin");
   };
 
-  if (authMode !="signin") {
+  if (authMode != "signin") {
     return (
       <div className="Auth-form-container">
         <form className="Auth-form">
