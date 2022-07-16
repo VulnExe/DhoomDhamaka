@@ -3,244 +3,349 @@ import "./birthdayform.css";
 
 function Birthdayform() {
   return (
-    <section class="h-100 h-custom gradient-custom-2">
+    <section class="h-100 bg-dark">
       <div class="container py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
-          <div class="col-12">
-            <div
-              class="card card-registration card-registration-2"
-              style={{borderRadius: '15px'}}
-            >
-              <div class="card-body p-0">
-                <div class="row g-0">
-                  <div class="col-lg-6">
-                    <div class="p-5">
-                      <h3 class="fw-normal mb-5" style={{color: "#4835d4"}}>
-                        General Infomation
-                      </h3>
+          <div class="col">
+            <div class="card card-registration my-4">
+              <div class="row g-0">
+                <div class="col-xl-6 d-none d-xl-block">
+                  <img
+                    src="https://www.finetoshine.com/wp-content/uploads/New-Happy-Birthday-Images-659x1024.jpg?v=1645172482"
+                    alt="Sample photo"
+                    class="img-fluid"
+                    style={{
+                      borderTopLeftRadius: ".25rem",
+                      borderBottomLeftRadius: ".25rem",
+                      width:"650px",
+                      height:"936px"
+                    }}
+                  />
+                </div>
+                <div class="col-xl-6">
+                  <div class="card-body p-md-5 text-black">
+                    <h3 class="mb-5 text-uppercase">
+                     Birthday Event Booking
+                    </h3>
 
-                      <div class="mb-4 pb-2">
-                        <select class="select">
-                          <option value="1">Title</option>
-                          <option value="2">Two</option>
-                          <option value="3">Three</option>
-                          <option value="4">Four</option>
-                        </select>
-                      </div>
-
-                      <div class="row">
-                        <div class="col-md-6 mb-4 pb-2">
-                          <div class="form-outline">
-                            <input
-                              type="text"
-                              id="form3Examplev2"
-                              class="form-control form-control-lg"
-                
-                            />
-                            <label class="form-label" for="form3Examplev2">
-                              First name
-                            </label>
-                          </div>
-                        </div>
-                        <div class="col-md-6 mb-4 pb-2">
-                          <div class="form-outline">
-                            <input
-                              type="text"
-                              id="form3Examplev3"
-                              class="form-control form-control-lg"
-                            />
-                            <label class="form-label" for="form3Examplev3">
-                              Last name
-                            </label>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="mb-4 pb-2">
-                        <select class="select">
-                          <option value="1">Position</option>
-                          <option value="2">Two</option>
-                          <option value="3">Three</option>
-                          <option value="4">Four</option>
-                        </select>
-                      </div>
-
-                      <div class="mb-4 pb-2">
-                        <div class="form-outline">
+                    <div class="row">
+                      <div class="col-md-6 mb-4">
+                        <div class="form-floating mb-3">
                           <input
                             type="text"
-                            id="form3Examplev4"
-                            class="form-control form-control-lg"
+                            class="form-control"
+                            id="floatingInput"
+                            placeholder="Name"
                           />
-                          <label class="form-label" for="form3Examplev4">
-                            Position
-                          </label>
+                          <label for="floatingInput"> Birthday person name</label>
                         </div>
                       </div>
-                      
-                      <div class="row">
-                        <div class="col-md-6 mb-4 pb-2 mb-md-0 pb-md-0">
-                          <div class="form-outline">
-                            <input
-                              type="text"
-                              id="form3Examplev5"
-                              class="form-control form-control-lg"
-                            />
-                            <label class="form-label" for="form3Examplev5">
-                              Bussines Arena
-                            </label>
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          {/* <select class="select">
-                            <option value="1">Employees</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                            <option value="4">Four</option>
-                          </select> */}
-                          <div class="form-outline">
-  <input type="text" id="form12" class="form-control" />
-  <label class="form-label" for="form12">Example label</label>
-</div>
+                      <div class="col-md-6 mb-4">
+                        <div class="form-floating mb-3">
+                          <input
+                            type="date"
+                            class="form-control"
+                            id="floatingInput"
+                            placeholder="Date"
+                          />
+                          <label for="floatingInput">Date</label>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="col-lg-6 bg-indigo text-white">
-                    <div class="p-5">
-                      <h3 class="fw-normal mb-5">Contact Details</h3>
 
-                      <div class="mb-4 pb-2">
-                        <div class="form-outline form-white">
+                    <div class="row">
+                      <div class="col-md-6 mb-4">
+                        <div class="form-floating mb-3">
                           <input
-                            type="text"
-                            id="form3Examplea2"
-                            class="form-control form-control-lg"
+                            type="time"
+                            class="form-control"
+                            id="floatingInput"
+                            placeholder="From"
                           />
-                          <label class="form-label" for="form3Examplea2">
-                            Street + Nr
-                          </label>
+                          <label for="floatingInput">From</label>
                         </div>
                       </div>
-
-                      <div class="mb-4 pb-2">
-                        <div class="form-outline form-white">
+                      <div class="col-md-6 mb-4">
+                        <div class="form-floating mb-3">
                           <input
-                            type="text"
-                            id="form3Examplea3"
-                            class="form-control form-control-lg"
+                            type="time"
+                            class="form-control"
+                            id="floatingInput"
+                            placeholder="To"
                           />
-                          <label class="form-label" for="form3Examplea3">
-                            Additional Information
-                          </label>
+                          <label for="floatingInput">To</label>
                         </div>
                       </div>
+                    </div>
 
-                      <div class="row">
-                        <div class="col-md-5 mb-4 pb-2">
-                          <div class="form-outline form-white">
-                            <input
-                              type="text"
-                              id="form3Examplea4"
-                              class="form-control form-control-lg"
-                            />
-                            <label class="form-label" for="form3Examplea4">
-                              Zip Code
-                            </label>
-                          </div>
-                        </div>
-                        <div class="col-md-7 mb-4 pb-2">
-                          <div class="form-outline form-white">
-                            <input
-                              type="text"
-                              id="form3Examplea5"
-                              class="form-control form-control-lg"
-                            />
-                            <label class="form-label" for="form3Examplea5">
-                              Place
-                            </label>
-                          </div>
-                        </div>
-                      </div>
+                    <div class="form-floating mb-4">
+                      <input
+                        type="address"
+                        class="form-control"
+                        id="floatingInput"
+                        placeholder="address"
+                      />
+                      <label for="floatingInput">Address</label>
+                    </div>
 
-                      <div class="mb-4 pb-2">
-                        <div class="form-outline form-white">
-                          <input
-                            type="text"
-                            id="form3Examplea6"
-                            class="form-control form-control-lg"
-                          />
-                          <label class="form-label" for="form3Examplea6">
-                            Country
-                          </label>
-                        </div>
-                      </div>
+                    <div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
+                      <h5 class="mb-0 me-4 fw-bold">Gender: </h5>
 
-                      <div class="row">
-                        <div class="col-md-5 mb-4 pb-2">
-                          <div class="form-outline form-white">
-                            <input
-                              type="text"
-                              id="form3Examplea7"
-                              class="form-control form-control-lg"
-                            />
-                            <label class="form-label" for="form3Examplea7">
-                              Code +
-                            </label>
-                          </div>
-                        </div>
-                        <div class="col-md-7 mb-4 pb-2">
-                          <div class="form-outline form-white">
-                            <input
-                              type="text"
-                              id="form3Examplea8"
-                              class="form-control form-control-lg"
-                            />
-                            <label class="form-label" for="form3Examplea8">
-                              Phone Number
-                            </label>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="mb-4">
-                        <div class="form-outline form-white">
-                          <input
-                            type="text"
-                            id="form3Examplea9"
-                            class="form-control form-control-lg"
-                          />
-                          <label class="form-label" for="form3Examplea9">
-                            Your Email
-                          </label>
-                        </div>
-                      </div>
-
-                      <div class="form-check d-flex justify-content-start mb-4 pb-3">
+                      <div class="form-check form-check-inline mb-0 me-4">
                         <input
-                          class="form-check-input me-3"
-                          type="checkbox"
-                          value=""
-                          id="form2Example3c"
+                          class="form-check-input"
+                          type="radio"
+                          name="inlineRadioOptions"
+                          id="femaleGender"
+                          value="option1"
                         />
-                        <label
-                          class="form-check-label text-white"
-                          for="form2Example3"
-                        >
-                          I do accept the{" "}
-                          <a href="#!" class="text-white">
-                            <u>Terms and Conditions</u>
-                          </a>{" "}
-                          of your site.
+                        <label class="form-check-label" for="femaleGender">
+                          Female
                         </label>
                       </div>
 
-                      <button
-                        type="button"
-                        class="btn btn-light btn-lg"
-                        data-mdb-ripple-color="dark"
-                      >
-                        Register
+                      <div class="form-check form-check-inline mb-0 me-4">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="inlineRadioOptions"
+                          id="maleGender"
+                          value="option2"
+                        />
+                        <label class="form-check-label" for="maleGender">
+                          Male
+                        </label>
+                      </div>
+
+                      <div class="form-check form-check-inline mb-0">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="inlineRadioOptions"
+                          id="otherGender"
+                          value="option3"
+                        />
+                        <label class="form-check-label" for="otherGender">
+                          Other
+                        </label>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="form-floating mb-3">
+                          <input
+                            type="number"
+                            class="form-control"
+                            id="floatingInput"
+                            placeholder="To"
+                          />
+                          <label for="floatingInput">Age</label>
+                        </div>
+                      </div>
+                      
+                    </div>
+                    <div class="row">
+                    <h4>E-Invitation</h4>
+                    <br/>
+                    <br/>
+                    <div class="col-md-4 mb-4"> 
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckCards"
+                      />
+                      <label class="form-check-label" for="flexCheckCards">
+                        cards
+                      </label>
+                    </div>
+                      </div>
+                      
+                  <div class="col-md-4 mb-4">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckPhotos"
+                      />  
+                      <label class="form-check-label" for="flexCheckPhotos">
+                        Photos
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckVideos"
+                      />  
+                      <label class="form-check-label" for="flexCheckVideos">
+                        Videos
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                    <h4>Shows</h4>
+                    <br/>
+                    <br/>
+                    <div class="col-md-3 mb-4"> 
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDance"
+                      />
+                      <label class="form-check-label" for="flexCheckDance">
+                        Dance
+                      </label>
+                    </div>
+                      </div>
+                      
+                  <div class="col-md-3 mb-4">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckMusic"
+                      />  
+                      <label class="form-check-label" for="flexCheckMusic">
+                        Music
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-md-3 mb-4">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckMagic"
+                      />  
+                      <label class="form-check-label" for="flexCheckMagic">
+                        Magic
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-md-3 mb-4">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckGames"
+                      />  
+                      <label class="form-check-label" for="flexCheckGames">
+                        Games
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                    <h4>Other Services :</h4>
+                    <br/>
+                    <br/>
+                    <div class="col-md-4 mb-4"> 
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckPhysicalInvitation"
+                      />
+                      <label class="form-check-label" for="flexCheckPhysicalInvitation">
+                        Physical Invitation
+                      </label>
+                    </div>
+                      </div>
+                      
+                  <div class="col-md-4 mb-4">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckPhotography"
+                      />  
+                      <label class="form-check-label" for="flexCheckPhotography">
+                        Photography
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDecoration"
+                      />  
+                      <label class="form-check-label" for="flexCheckDecoration">
+                        Decoration
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 mb-4"> 
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckCatering"
+                      />
+                      <label class="form-check-label" for="flexCheckCatering">
+                        Catering
+                      </label>
+                    </div>
+                      </div>
+                      
+                  <div class="col-md-4 mb-4">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckBeauty"
+                      />  
+                      <label class="form-check-label" for="flexCheckBeauty">
+                        Beauty
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckVenue"
+                      />  
+                      <label class="form-check-label" for="flexCheckVenue">
+                        Venue
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                   <label for="exampleFormControlTextarea1">Special Services</label>
+                   <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                 </div>
+
+                    <div class="d-flex justify-content-end pt-3">
+                      <button type="button" class="btn btn-warning btn-lg">
+                        Reset all
+                      </button>
+                      <button type="button" class="btn btn-success btn-lg ms-2">
+                        Submit form
                       </button>
                     </div>
                   </div>

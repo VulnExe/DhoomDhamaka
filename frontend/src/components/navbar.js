@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 // import "./navbar.css";
 
 // import {
@@ -38,118 +39,118 @@ const Navbar = () => {
   };
   return (
     <nav className=" navbar  navbar-expand-lg mb-0 navbar-dark bg-light">
-      <div className="container-fluid">
-        <a className="navbar-brand  ms-5 text-white " href="#">
-          {/* <WbIncandescentIcon className="fs-1 mt-2 pe-2" /> */}
-          <span className=" fs-5 text-primary fw-bold">Bandhan</span>
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-mdb-toggle="collapse"
-          data-mdb-target="#navbarNavDropdown"
-          aria-controls="navbarText"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <i class="fas fa-bars  text-danger"></i>
-        </button>
-        <div
-          className="collapse navbar-collapse justify-content-end"
-          id="navbarNavDropdown"
-        >
-          <ul className="navbar-nav d-flex align-items-center me-5">
-            <li className="nav-item mb-sm-2">
-              <a
-                type="button"
-                className="btn btn-rounded btn-dark me-2 fw-bold"
-                aria-current="page"
-              >
-                <NavLink to="/" className="text-white">
-                  Home
-                </NavLink>
-              </a>
-            </li>
-            <li className="nav-item mb-sm-2">
-              <a
-                to="/events"
-                type="button"
-                className="btn btn-rounded  btn-warning me-2 fw-bold"
-                aria-current="page"
-              >
-                <NavLink to="/events" className="text-white">
-                  Events
-                </NavLink>
-              </a>
-            </li>
+    <div className="container-fluid">
+      <a className="navbar-brand  ms-5 text-white " href="#">
+        {/* <WbIncandescentIcon className="fs-1 mt-2 pe-2" /> */}
+        <span className=" fs-5 text-primary fw-bold">Bandhan</span>
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-mdb-toggle="collapse"
+        data-mdb-target="#navbarNavDropdown"
+        aria-controls="navbarText"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <i class="fas fa-bars text-dark"></i>
+      </button>
+      <div
+        className="collapse navbar-collapse justify-content-end"
+        id="navbarNavDropdown"
+      >
+        <ul className="navbar-nav d-flex align-items-center me-5">
+        <li className="nav-item mb-sm-2">
+          <Link
+            to="/"
+            type="button"
+            className="btn btn-warning me-1 fw-bold"
+            aria-current="page"
+          >
+            HOME
+          </Link>
+        </li>
+        <li class="nav-item mb-sm-2">
+            <Link
+              to="/events"
+              type="button"
+              class="btn btn-info me-2 fw-bold"
+            >
+              Events
+            </Link>
+          </li>
+          <li class="nav-item mb-sm-2">
+            <Link
+              to="/becomevendor"
+              type="button"
+              class="btn btn-primary me-2 fw-bold"
+            >
+              Become a Vendor
+            </Link>
+          </li>
 
+          {/* <li className="nav-item mb-sm-2">
+            <a
+              to="/"
+              type="button"
+              className="btn btn-warning btn-rounded me-1 fw-bold"
+            >
+              <NavLink to="/" className="text-white">
+                Register
+              </NavLink>
+            </a>
+          </li> */}
+          {!isLoggedIn && (
             <li className="nav-item mb-sm-2">
-              <a
-                to="/becomevendor"
+            <Link
+              to="/register"
+              type="button"
+              className="btn btn-primary me-1 fw-bold"
+            >
+              SIGN IN
+            </Link>
+          </li>
+          )}
+          {!isLoggedIn && (
+            <li class="nav-item mb-sm-2">
+            <Link
+              to="/login"
+              type="button"
+              class="btn btn-success me-2 fw-bold"
+            >
+              Login
+              {/* <LoginIcon className="ps-1" /> */}
+            </Link>
+          </li>
+          )}
+          {!!isLoggedIn && (
+            <li class="nav-item mb-sm-2">
+            <Link
+              to="/myacc"
+              type="button"
+              class="btn btn-warning me-2 fw-bold"
+            >
+              My profile
+              
+            </Link>
+          </li>
+          )}
+          {!!isLoggedIn && (
+            <li class="nav-item mb-sm-2">
+              <button
                 type="button"
-                className="btn btn-secondary btn-rounded me-1 fw-bold"
+                onClick={handleLogout}
+                className="btn btn-danger text-white me-1 fw-bold"
               >
-                <NavLink to="/becomevendor" className="text-white">
-                  Become a Vendor
-                </NavLink>
-              </a>
+                LOGOUT
+                {/* <LogoutIcon className="ps-1" /> */}
+              </button>
             </li>
-            {!isLoggedIn && (
-              <li className="nav-item mb-sm-2">
-                <a
-                  type="button"
-                  className="btn btn-rounded  btn-info me-1 fw-bold"
-                >
-                  <NavLink to="/register" className="text-white">
-                    SIGN IN
-                  </NavLink>
-                </a>
-              </li>
-            )}
-            {!isLoggedIn && (
-              <li class="nav-item mb-sm-2">
-                <a
-                  type="button"
-                  class="btn btn-sm btn-rounded  btn-info me-2 fw-bold"
-                >
-                  <NavLink to="/login" className="text-white">
-                    Login
-                  </NavLink>
-
-                  {/* <LoginIcon className="ps-1" /> */}
-                </a>
-              </li>
-            )}
-            {!!isLoggedIn && (
-              <li className="nav-item mb-sm-2">
-                <a
-                  type="button"
-                  className="btn btn-rounded  btn-info me-1 fw-bold"
-                >
-                  <NavLink to="/myacc" className="text-white">
-                    Myprofile
-                  </NavLink>
-
-                  {/*<NoteAddIcon className="ms-2" /> */}
-                </a>
-              </li>
-            )}
-            {!!isLoggedIn && (
-              <li class="nav-item mb-sm-2">
-                <button
-                  type="button"
-                  onClick={handleLogout}
-                  className="btn btn-rounded btn-danger text-white me-1 fw-bold"
-                >
-                  LOGOUT
-                  {/* <LogoutIcon className="ps-1" /> */}
-                </button>
-              </li>
-            )}
-          </ul>
-        </div>
+          )}
+        </ul>
       </div>
-    </nav>
+    </div>
+  </nav>
 
     // <>
     //   <nav className="main-nav">
