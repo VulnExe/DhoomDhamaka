@@ -38,7 +38,7 @@ const Navbar = () => {
       });
   };
   return (
-    <nav className=" navbar  navbar-expand-lg mb-0 navbar-dark bg-light">
+    <nav className=" navbar fixed-top  navbar-expand-lg mb-0 navbar-dark bg-light">
     <div className="container-fluid">
       <a className="navbar-brand  ms-5 text-white " href="#">
         {/* <WbIncandescentIcon className="fs-1 mt-2 pe-2" /> */}

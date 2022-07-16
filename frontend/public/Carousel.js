@@ -1,41 +1,38 @@
 import React from "react";
-import {Link} from 'react-router-dom'
+import { Link } from "react-router-dom";
 
-import './birthdaycarousel.css'
-
-function Birthdaycarousel() {
+function Carousel() {
   return (
+    // <Carousel />
+    // <!-- carousel contents starts  -->
     <div
       id="carouselExampleInterval"
       class="carousel slide carousel-fade"
       data-bs-ride="carousel"
     >
-      <div class="carousel-inner bg-image hover-overlay trt rounded-5 shadow-4-strong">
+      <div class="carousel-inner bg-image hover-overlay rounded-5 shadow-4-strong">
         {/* <!-- first item  --> */}
-        <div class="carousel-item active ">
+        <div class="carousel-item active">
           {/* <img
             alt="First slide"
             class="d-block w-100"
             src="https://i.postimg.cc/Jn0X0pDS/1.jpg"
           /> */}
           <a href="#!" className=" w-100">
-            <div
-              class="mask"
-              style={{ backgroundColor: "rgba(251, 251, 251, 0.7)" }}
-            ></div>
+          <div class="mask" style={{backgroundColor: "rgba(251, 251, 251, 0.2)"}}></div>
           </a>
           <div class="carousel-caption  d-md-block">
             <h5
-              class="animated bounceInRight  d-none d-md-block"
+              class="animated bounceInRight d-none d-md-block"
               style={{ animationDelay: "1s", overflowY: "hidden" }}
             >
-              Keeper
+             Keeper
             </h5>
             <h6
               class="animated bounceInRight d-sm-block d-md-none"
               style={{ animationDelay: "1s", overflowY: "hidden" }}
             >
-              Keeper
+             Keeper
             </h6>
             {/* <!-- lge dve  --> */}
             <p
@@ -152,7 +149,7 @@ function Birthdaycarousel() {
               class="animated zoomIn d-none d-md-block "
               style={{ animationDelay: "3s" }}
             >
-              <Link to="/login" class="btn btn-outline-dark desb p-2">
+             <Link to="/login" class="btn btn-outline-dark desb p-2">
                 More Info
               </Link>
             </p>
@@ -202,4 +199,4 @@ function Birthdaycarousel() {
   );
 }
 
-export default Birthdaycarousel;
+export default Carousel;
