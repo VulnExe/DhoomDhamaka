@@ -10,7 +10,7 @@ function Birthdayform() {
             <div class="card card-registration my-4">
               <div class="row g-0">
                 <div class="col-xl-6 d-none d-xl-block">
-                  <img
+                    <img
                     src="https://www.finetoshine.com/wp-content/uploads/New-Happy-Birthday-Images-659x1024.jpg?v=1645172482"
                     alt="Sample photo"
                     class="img-fluid"
@@ -341,10 +341,10 @@ function Birthdayform() {
                  </div>
 
                     <div class="d-flex justify-content-end pt-3">
-                      <button type="button" class="btn btn-warning btn-lg">
+                      <button type="button" class="btn btn-warning btn-lg ">
                         Reset all
                       </button>
-                      <button type="button" class="btn btn-success btn-lg ms-2">
+                      <button type="button" class="btn btn-info btn-lg ms-2 ">
                         Submit form
                       </button>
                     </div>

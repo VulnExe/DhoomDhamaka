@@ -5,7 +5,9 @@ import React from 'react'
 function Birthdayportfolio() {
   return (
     <>
-    <h2 class="text-center"> portfolio</h2>
+    <div class="container" >
+    <h2 class="text-center display-3" style={{padding:"70px"}}> portfolio</h2>
+    </div>
     <div class="container">
 
 <div class="row">
@@ -26,7 +28,11 @@ function Birthdayportfolio() {
       class="w-100 shadow-1-strong rounded mb-4"
       alt="Yosemite National Park"
     />
-     
+     <img
+      src="/images/pic3.jpeg"
+      class="w-100 shadow-1-strong rounded mb-4"
+      alt="Mountains in the Clouds"
+    />
   </div>
 
   <div class="col-lg-4 mb-4 mb-lg-0">
@@ -41,11 +47,7 @@ function Birthdayportfolio() {
       class="w-100 shadow-1-strong rounded mb-4"
       alt="Boat on Calm Water"
     />
-     <img
-      src="/images/pic1.jpeg"
-      class="w-100 shadow-1-strong rounded mb-4"
-      alt="Yosemite National Park"
-    />
+     
   </div>
 
   <div class="col-lg-4 mb-4 mb-lg-0">
