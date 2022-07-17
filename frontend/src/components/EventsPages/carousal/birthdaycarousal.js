@@ -1,7 +1,7 @@
 import React from "react";
-import {Link} from 'react-router-dom'
+import { Link } from "react-router-dom";
 
-import './birthdaycarousel.css'
+import "./birthdaycarousel.css";
 
 function Birthdaycarousel() {
   return (
@@ -10,20 +10,20 @@ function Birthdaycarousel() {
       class="carousel slide carousel-fade"
       data-bs-ride="carousel"
     >
-      <div class="carousel-inner bg-image hover-overlay trt rounded-5 shadow-4-strong">
+      <div class="carousel-inner rounded-5 shadow-4-strong">
         {/* <!-- first item  --> */}
-        <div class="carousel-item active ">
+        <div class="carousel-item hover-zoom active ">
           {/* <img
             alt="First slide"
             class="d-block w-100"
             src="https://i.postimg.cc/Jn0X0pDS/1.jpg"
+            src="https://bit.ly/3PgHvEV"
           /> */}
-          <a href="#!" className=" w-100">
-            <div
-              class="mask"
-              style={{ backgroundColor: "rgba(251, 251, 251, 0.7)" }}
-            ></div>
-          </a>
+          <div
+            class="mask"
+            style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
+          ></div>
+          <a href="#!" className=" w-100"></a>
           <div class="carousel-caption  d-md-block">
             <h5
               class="animated bounceInRight  d-none d-md-block"
@@ -76,6 +76,10 @@ function Birthdaycarousel() {
             class="d-block w-100"
             src="https://i.postimg.cc/SQXZtrTZ/2.jpg"
           /> */}
+          <div
+            class="mask"
+            style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
+          ></div>
           <div class="carousel-caption  d-md-block">
             <h5
               class="animated slideInDown d-none d-md-block"
@@ -123,11 +127,17 @@ function Birthdaycarousel() {
         </div>
         {/* <!-- third item  --> */}
         <div class="carousel-item">
-          {/* <img
+          {
+            /* <img
             alt="Third slide"
             class="d-block w-100"
             src="https://i.postimg.cc/Jh4x3cH5/3.jpg"
-          /> */}
+          /> */
+            <div
+              class="mask"
+              style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
+            ></div>
+          }
           <div class="carousel-caption  d-md-block">
             <h5
               class="animated zoomIn d-none d-md-block"
