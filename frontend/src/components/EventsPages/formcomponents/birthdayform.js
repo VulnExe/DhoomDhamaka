@@ -34,18 +34,18 @@ function Birthdayform() {
                     }}
                   /> */}
                   {/* <!-- Gallery --> */}
-                  <div className="card example-1 scrollbar-ripe-malinka">
+                  <div className="card example-1 mt-1 scrollbar-ripe-malinka">
                     <div class="row">
                       <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
                         <img
                           src="https://bit.ly/3o6TYiy"
-                          class="w-100 shadow-1-strong rounded mb-4"
+                          class="w-100 shadow-4-strong rounded mb-4"
                           alt="Boat on Calm Water"
                         />
 
                         <img
                           src="https://bit.ly/3z90bkq"
-                          class="w-100 shadow-1-strong rounded mb-4"
+                          class="w-100 shadow-4-strong rounded mb-4"
                           alt="Wintry Mountain Landscape"
                         />
                       </div>
@@ -53,13 +53,13 @@ function Birthdayform() {
                       <div class="col-lg-4 mb-4 mb-lg-0">
                         <img
                           src="https://bit.ly/3ob4tkS"
-                          class="w-100 shadow-1-strong rounded mb-4"
+                          class="w-100 shadow-4-strong rounded mb-4"
                           alt="Mountains in the Clouds"
                         />
 
                         <img
                           src="https://bit.ly/3o6TYiy"
-                          class="w-100 shadow-1-strong rounded mb-4"
+                          class="w-100 shadow-4-strong rounded mb-4"
                           alt="Boat on Calm Water"
                         />
                       </div>
@@ -67,13 +67,13 @@ function Birthdayform() {
                       <div class="col-lg-4 mb-4 mb-lg-0">
                         <img
                           src="https://bit.ly/3PgTfar"
-                          class="w-100 shadow-1-strong rounded mb-4"
+                          class="w-100 shadow-4-strong rounded mb-4"
                           alt="Waves at Sea"
                         />
 
                         <img
                           src="https://bit.ly/3ceNueN"
-                          class="w-100 shadow-1-strong rounded mb-4"
+                          class="w-100 shadow-4-strong rounded mb-4"
                           alt="Yosemite National Park"
                         />
                       </div>
@@ -82,13 +82,13 @@ function Birthdayform() {
                       <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
                         <img
                           src="https://bit.ly/3o6TYiy"
-                          class="w-100 shadow-1-strong rounded mb-4"
+                          class="w-100 shadow-4-strong rounded mb-4"
                           alt="Boat on Calm Water"
                         />
 
                         <img
                           src="https://bit.ly/3z90bkq"
-                          class="w-100 shadow-1-strong rounded mb-4"
+                          class="w-100 shadow-4-strong rounded mb-4"
                           alt="Wintry Mountain Landscape"
                         />
                       </div>
@@ -96,13 +96,13 @@ function Birthdayform() {
                       <div class="col-lg-4 mb-4 mb-lg-0">
                         <img
                           src="https://bit.ly/3ob4tkS"
-                          class="w-100 shadow-1-strong rounded mb-4"
+                          class="w-100 shadow-4-strong rounded mb-4"
                           alt="Mountains in the Clouds"
                         />
 
                         <img
                           src="https://bit.ly/3o6TYiy"
-                          class="w-100 shadow-1-strong rounded mb-4"
+                          class="w-100 shadow-4-strong rounded mb-4"
                           alt="Boat on Calm Water"
                         />
                       </div>
@@ -110,13 +110,13 @@ function Birthdayform() {
                       <div class="col-lg-4 mb-4 mb-lg-0">
                         <img
                           src="https://bit.ly/3PgTfar"
-                          class="w-100 shadow-1-strong rounded mb-4"
+                          class="w-100 shadow-4-strong rounded mb-4"
                           alt="Waves at Sea"
                         />
 
                         <img
                           src="https://bit.ly/3ceNueN"
-                          class="w-100 shadow-1-strong rounded mb-4"
+                          class="w-100 shadow-4-strong rounded mb-4"
                           alt="Yosemite National Park"
                         />
                       </div>
@@ -125,13 +125,13 @@ function Birthdayform() {
                       <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
                         <img
                           src="https://bit.ly/3o6TYiy"
-                          class="w-100 shadow-1-strong rounded mb-4"
+                          class="w-100 shadow-4-strong rounded mb-4"
                           alt="Boat on Calm Water"
                         />
 
                         <img
                           src="https://bit.ly/3z90bkq"
-                          class="w-100 shadow-1-strong rounded mb-4"
+                          class="w-100 shadow-4-strong rounded mb-4"
                           alt="Wintry Mountain Landscape"
                         />
                       </div>
@@ -139,13 +139,13 @@ function Birthdayform() {
                       <div class="col-lg-4 mb-4 mb-lg-0">
                         <img
                           src="https://bit.ly/3ob4tkS"
-                          class="w-100 shadow-1-strong rounded mb-4"
+                          class="w-100 shadow-4-strong rounded mb-4"
                           alt="Mountains in the Clouds"
                         />
 
                         <img
                           src="https://bit.ly/3o6TYiy"
-                          class="w-100 shadow-1-strong rounded mb-4"
+                          class="w-100 shadow-4-strong rounded mb-4"
                           alt="Boat on Calm Water"
                         />
                       </div>
@@ -153,13 +153,13 @@ function Birthdayform() {
                       <div class="col-lg-4 mb-4 mb-lg-0">
                         <img
                           src="https://bit.ly/3PgTfar"
-                          class="w-100 shadow-1-strong rounded mb-4"
+                          class="w-100 shadow-4-strong rounded mb-4"
                           alt="Waves at Sea"
                         />
 
                         <img
                           src="https://bit.ly/3ceNueN"
-                          class="w-100 shadow-1-strong rounded mb-4"
+                          class="w-100 shadow-4-strong rounded mb-4"
                           alt="Yosemite National Park"
                         />
                       </div>
@@ -168,13 +168,13 @@ function Birthdayform() {
                       <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
                         <img
                           src="https://bit.ly/3o6TYiy"
-                          class="w-100 shadow-1-strong rounded mb-4"
+                          class="w-100 shadow-4-strong rounded mb-4"
                           alt="Boat on Calm Water"
                         />
 
                         <img
                           src="https://bit.ly/3z90bkq"
-                          class="w-100 shadow-1-strong rounded mb-4"
+                          class="w-100 shadow-4-strong rounded mb-4"
                           alt="Wintry Mountain Landscape"
                         />
                       </div>
@@ -182,13 +182,13 @@ function Birthdayform() {
                       <div class="col-lg-4 mb-4 mb-lg-0">
                         <img
                           src="https://bit.ly/3ob4tkS"
-                          class="w-100 shadow-1-strong rounded mb-4"
+                          class="w-100 shadow-4-strong rounded mb-4"
                           alt="Mountains in the Clouds"
                         />
 
                         <img
                           src="https://bit.ly/3o6TYiy"
-                          class="w-100 shadow-1-strong rounded mb-4"
+                          class="w-100 shadow-4-strong rounded mb-4"
                           alt="Boat on Calm Water"
                         />
                       </div>
@@ -196,13 +196,13 @@ function Birthdayform() {
                       <div class="col-lg-4 mb-4 mb-lg-0">
                         <img
                           src="https://bit.ly/3PgTfar"
-                          class="w-100 shadow-1-strong rounded mb-4"
+                          class="w-100 shadow-4-strong rounded mb-4"
                           alt="Waves at Sea"
                         />
 
                         <img
                           src="https://bit.ly/3ceNueN"
-                          class="w-100 shadow-1-strong rounded mb-4"
+                          class="w-100 shadow-4-strong rounded mb-4"
                           alt="Yosemite National Park"
                         />
                       </div>
@@ -211,7 +211,7 @@ function Birthdayform() {
                   {/* <!-- Gallery --> */}
                 </div>
                 <div class="col-xl-6">
-                  <div class="card-body p-md-5 text-black">
+                  <div class="card-body bg-light p-md-5 text-black">
                     <h3 class="mb-5 text-uppercase">Birthday Event Booking</h3>
 
                     <div class="row">
