@@ -9,8 +9,8 @@ function Birthdayform() {
           <div class="col">
             <div class="card shadow-5-strong card-registration my-4">
               <div class="row g-0">
-                <div class="col-xl-6 d-none d-xl-block">
-                <img
+                <div class="col-xl-6  d-none d-xl-block">
+                  {/* <img
                     src="https://bit.ly/3PDp0KN"
                     alt="Sample photo"
                     class=" card-img-top rounded img-thumbnail mb-5"
@@ -32,7 +32,183 @@ function Birthdayform() {
                       // width:"650px",
                       height:"552px"
                     }}
-                  />
+                  /> */}
+                  {/* <!-- Gallery --> */}
+                  <div className="card example-1 scrollbar-ripe-malinka">
+                    <div class="row">
+                      <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                        <img
+                          src="https://bit.ly/3o6TYiy"
+                          class="w-100 shadow-1-strong rounded mb-4"
+                          alt="Boat on Calm Water"
+                        />
+
+                        <img
+                          src="https://bit.ly/3z90bkq"
+                          class="w-100 shadow-1-strong rounded mb-4"
+                          alt="Wintry Mountain Landscape"
+                        />
+                      </div>
+
+                      <div class="col-lg-4 mb-4 mb-lg-0">
+                        <img
+                          src="https://bit.ly/3ob4tkS"
+                          class="w-100 shadow-1-strong rounded mb-4"
+                          alt="Mountains in the Clouds"
+                        />
+
+                        <img
+                          src="https://bit.ly/3o6TYiy"
+                          class="w-100 shadow-1-strong rounded mb-4"
+                          alt="Boat on Calm Water"
+                        />
+                      </div>
+
+                      <div class="col-lg-4 mb-4 mb-lg-0">
+                        <img
+                          src="https://bit.ly/3PgTfar"
+                          class="w-100 shadow-1-strong rounded mb-4"
+                          alt="Waves at Sea"
+                        />
+
+                        <img
+                          src="https://bit.ly/3ceNueN"
+                          class="w-100 shadow-1-strong rounded mb-4"
+                          alt="Yosemite National Park"
+                        />
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                        <img
+                          src="https://bit.ly/3o6TYiy"
+                          class="w-100 shadow-1-strong rounded mb-4"
+                          alt="Boat on Calm Water"
+                        />
+
+                        <img
+                          src="https://bit.ly/3z90bkq"
+                          class="w-100 shadow-1-strong rounded mb-4"
+                          alt="Wintry Mountain Landscape"
+                        />
+                      </div>
+
+                      <div class="col-lg-4 mb-4 mb-lg-0">
+                        <img
+                          src="https://bit.ly/3ob4tkS"
+                          class="w-100 shadow-1-strong rounded mb-4"
+                          alt="Mountains in the Clouds"
+                        />
+
+                        <img
+                          src="https://bit.ly/3o6TYiy"
+                          class="w-100 shadow-1-strong rounded mb-4"
+                          alt="Boat on Calm Water"
+                        />
+                      </div>
+
+                      <div class="col-lg-4 mb-4 mb-lg-0">
+                        <img
+                          src="https://bit.ly/3PgTfar"
+                          class="w-100 shadow-1-strong rounded mb-4"
+                          alt="Waves at Sea"
+                        />
+
+                        <img
+                          src="https://bit.ly/3ceNueN"
+                          class="w-100 shadow-1-strong rounded mb-4"
+                          alt="Yosemite National Park"
+                        />
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                        <img
+                          src="https://bit.ly/3o6TYiy"
+                          class="w-100 shadow-1-strong rounded mb-4"
+                          alt="Boat on Calm Water"
+                        />
+
+                        <img
+                          src="https://bit.ly/3z90bkq"
+                          class="w-100 shadow-1-strong rounded mb-4"
+                          alt="Wintry Mountain Landscape"
+                        />
+                      </div>
+
+                      <div class="col-lg-4 mb-4 mb-lg-0">
+                        <img
+                          src="https://bit.ly/3ob4tkS"
+                          class="w-100 shadow-1-strong rounded mb-4"
+                          alt="Mountains in the Clouds"
+                        />
+
+                        <img
+                          src="https://bit.ly/3o6TYiy"
+                          class="w-100 shadow-1-strong rounded mb-4"
+                          alt="Boat on Calm Water"
+                        />
+                      </div>
+
+                      <div class="col-lg-4 mb-4 mb-lg-0">
+                        <img
+                          src="https://bit.ly/3PgTfar"
+                          class="w-100 shadow-1-strong rounded mb-4"
+                          alt="Waves at Sea"
+                        />
+
+                        <img
+                          src="https://bit.ly/3ceNueN"
+                          class="w-100 shadow-1-strong rounded mb-4"
+                          alt="Yosemite National Park"
+                        />
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                        <img
+                          src="https://bit.ly/3o6TYiy"
+                          class="w-100 shadow-1-strong rounded mb-4"
+                          alt="Boat on Calm Water"
+                        />
+
+                        <img
+                          src="https://bit.ly/3z90bkq"
+                          class="w-100 shadow-1-strong rounded mb-4"
+                          alt="Wintry Mountain Landscape"
+                        />
+                      </div>
+
+                      <div class="col-lg-4 mb-4 mb-lg-0">
+                        <img
+                          src="https://bit.ly/3ob4tkS"
+                          class="w-100 shadow-1-strong rounded mb-4"
+                          alt="Mountains in the Clouds"
+                        />
+
+                        <img
+                          src="https://bit.ly/3o6TYiy"
+                          class="w-100 shadow-1-strong rounded mb-4"
+                          alt="Boat on Calm Water"
+                        />
+                      </div>
+
+                      <div class="col-lg-4 mb-4 mb-lg-0">
+                        <img
+                          src="https://bit.ly/3PgTfar"
+                          class="w-100 shadow-1-strong rounded mb-4"
+                          alt="Waves at Sea"
+                        />
+
+                        <img
+                          src="https://bit.ly/3ceNueN"
+                          class="w-100 shadow-1-strong rounded mb-4"
+                          alt="Yosemite National Park"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  {/* <!-- Gallery --> */}
                 </div>
                 <div class="col-xl-6">
                   <div class="card-body p-md-5 text-black">
