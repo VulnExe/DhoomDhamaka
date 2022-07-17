@@ -30,3 +30,6 @@
         margin-left: 10px;
         height: 1120px;
     }
+    .bg-indigo{
+            background: linear-gradient(0deg, #80FFDB, #5390D9);
+    }

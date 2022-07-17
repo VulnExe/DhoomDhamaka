@@ -211,8 +211,10 @@ function Birthdayform() {
                   {/* <!-- Gallery --> */}
                 </div>
                 <div class="col-xl-6">
-                  <div class="card-body bg-light p-md-5 text-black">
-                    <h3 class="mb-5 text-uppercase">Birthday Event Booking</h3>
+                  <div class="card-body bg-indigo p-md-5 text-dark fw-bolder rounded">
+                    <h3 class="mb-5 text-center fw-bold text-uppercase">
+                      Birthday Event Booking
+                    </h3>
 
                     <div class="row">
                       <div class="col-md-6 mb-4">
@@ -277,8 +279,8 @@ function Birthdayform() {
                       <label for="floatingInput">Address</label>
                     </div>
 
-                    <div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
-                      <h5 class="mb-0 me-4 fw-bold">Gender: </h5>
+                    {/* <div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
+                      <h4 class="mb-0 me-4 fw-bold">Gender: </h4>
 
                       <div class="form-check form-check-inline mb-0 me-4">
                         <input
@@ -318,8 +320,52 @@ function Birthdayform() {
                           Other
                         </label>
                       </div>
-                    </div>
+                    </div> */}
+                    <div class="btn-group mb-4">
+                    <input
+                        type="radio"
+                        class="btn-check"
+                        name="options"
+                        id="option1"
+                        autocomplete="off"
+                        disabled
+                      />
+                      <label class="btn btn-warning" for="option1">
+                        Gender
+                      </label>
+                      <input
+                        type="radio"
+                        class="btn-check"
+                        name="options"
+                        id="option11"
+                        autocomplete="off"
+                        
+                      />
+                      <label class="btn btn-primary" for="option11">
+                        Male
+                      </label>
+                      <input
+                        type="radio"
+                        class="btn-check"
+                        name="options"
+                        id="option2"
+                        autocomplete="off"
+                      />
+                      <label class="btn btn-primary" for="option2">
+                        Female
+                      </label>
 
+                      <input
+                        type="radio"
+                        class="btn-check"
+                        name="options"
+                        id="option3"
+                        autocomplete="off"
+                      />
+                      <label class="btn btn-primary" for="option3">
+                        Others
+                      </label>
+                    </div>
                     <div class="row">
                       <div class="col-md-6 mb-4">
                         <div class="form-floating mb-3">
@@ -334,7 +380,7 @@ function Birthdayform() {
                       </div>
                     </div>
                     <div class="row">
-                      <h4>E-Invitation</h4>
+                      <h4 className="fw-bold ">E-Invitation</h4>
                       <br />
                       <br />
                       <div class="col-md-4 mb-4">
@@ -379,7 +425,7 @@ function Birthdayform() {
                       </div>
                     </div>
                     <div class="row">
-                      <h4>Shows</h4>
+                      <h4 className="fw-bold ">Shows</h4>
                       <br />
                       <br />
                       <div class="col-md-3 mb-4">
@@ -437,7 +483,7 @@ function Birthdayform() {
                       </div>
                     </div>
                     <div class="row">
-                      <h4>Other Services :</h4>
+                      <h4 className="fw-bold ">Other Services :</h4>
                       <br />
                       <br />
                       <div class="col-md-4 mb-4">
@@ -536,7 +582,7 @@ function Birthdayform() {
                       </div>
                     </div>
                     <div class="form-group">
-                      <label for="exampleFormControlTextarea1">
+                      <label for="exampleFormControlTextarea1" className="fs-5">
                         Special Services
                       </label>
                       <textarea
