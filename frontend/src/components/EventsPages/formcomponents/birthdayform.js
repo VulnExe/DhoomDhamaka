@@ -3,30 +3,40 @@ import "./birthdayform.css";
 
 function Birthdayform() {
   return (
-    <section class="h-100 bg-dark">
+    <section class="h-100">
       <div class="container py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
           <div class="col">
-            <div class="card card-registration my-4">
+            <div class="card shadow-5-strong card-registration my-4">
               <div class="row g-0">
                 <div class="col-xl-6 d-none d-xl-block">
-                    <img
-                    src="https://www.finetoshine.com/wp-content/uploads/New-Happy-Birthday-Images-659x1024.jpg?v=1645172482"
+                <img
+                    src="https://bit.ly/3PDp0KN"
                     alt="Sample photo"
-                    class="img-fluid"
+                    class=" card-img-top rounded img-thumbnail mb-5"
                     style={{
                       borderTopLeftRadius: ".25rem",
                       borderBottomLeftRadius: ".25rem",
-                      width:"650px",
-                      height:"936px"
+                      // width:"650px",
+                      height:"550px"
+                    }}
+                  />
+                  
+                  <img
+                    src="https://bit.ly/3OmdhPO"
+                    alt="Sample photo"
+                    class=" card-img-top rounded-4 shadow-2-strong"
+                    style={{
+                      borderTopLeftRadius: ".25rem",
+                      borderBottomLeftRadius: ".25rem",
+                      // width:"650px",
+                      height:"552px"
                     }}
                   />
                 </div>
                 <div class="col-xl-6">
                   <div class="card-body p-md-5 text-black">
-                    <h3 class="mb-5 text-uppercase">
-                     Birthday Event Booking
-                    </h3>
+                    <h3 class="mb-5 text-uppercase">Birthday Event Booking</h3>
 
                     <div class="row">
                       <div class="col-md-6 mb-4">
@@ -37,7 +47,10 @@ function Birthdayform() {
                             id="floatingInput"
                             placeholder="Name"
                           />
-                          <label for="floatingInput"> Birthday person name</label>
+                          <label for="floatingInput">
+                            {" "}
+                            Birthday person name
+                          </label>
                         </div>
                       </div>
                       <div class="col-md-6 mb-4">
@@ -132,7 +145,7 @@ function Birthdayform() {
                     </div>
 
                     <div class="row">
-                    <div class="col-md-6 mb-4">
+                      <div class="col-md-6 mb-4">
                         <div class="form-floating mb-3">
                           <input
                             type="number"
@@ -143,202 +156,219 @@ function Birthdayform() {
                           <label for="floatingInput">Age</label>
                         </div>
                       </div>
-                      
                     </div>
                     <div class="row">
-                    <h4>E-Invitation</h4>
-                    <br/>
-                    <br/>
-                    <div class="col-md-4 mb-4"> 
-                    <div class="form-check">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        value=""
-                        id="flexCheckCards"
-                      />
-                      <label class="form-check-label" for="flexCheckCards">
-                        cards
-                      </label>
-                    </div>
+                      <h4>E-Invitation</h4>
+                      <br />
+                      <br />
+                      <div class="col-md-4 mb-4">
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value=""
+                            id="flexCheckCards"
+                          />
+                          <label class="form-check-label" for="flexCheckCards">
+                            cards
+                          </label>
+                        </div>
                       </div>
-                      
-                  <div class="col-md-4 mb-4">
-                    <div class="form-check">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        value=""
-                        id="flexCheckPhotos"
-                      />  
-                      <label class="form-check-label" for="flexCheckPhotos">
-                        Photos
-                      </label>
-                    </div>
-                  </div>
-                  <div class="col-md-4 mb-4">
-                    <div class="form-check">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        value=""
-                        id="flexCheckVideos"
-                      />  
-                      <label class="form-check-label" for="flexCheckVideos">
-                        Videos
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                    <h4>Shows</h4>
-                    <br/>
-                    <br/>
-                    <div class="col-md-3 mb-4"> 
-                    <div class="form-check">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        value=""
-                        id="flexCheckDance"
-                      />
-                      <label class="form-check-label" for="flexCheckDance">
-                        Dance
-                      </label>
-                    </div>
+
+                      <div class="col-md-4 mb-4">
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value=""
+                            id="flexCheckPhotos"
+                          />
+                          <label class="form-check-label" for="flexCheckPhotos">
+                            Photos
+                          </label>
+                        </div>
                       </div>
-                      
-                  <div class="col-md-3 mb-4">
-                    <div class="form-check">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        value=""
-                        id="flexCheckMusic"
-                      />  
-                      <label class="form-check-label" for="flexCheckMusic">
-                        Music
-                      </label>
-                    </div>
-                  </div>
-                  <div class="col-md-3 mb-4">
-                    <div class="form-check">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        value=""
-                        id="flexCheckMagic"
-                      />  
-                      <label class="form-check-label" for="flexCheckMagic">
-                        Magic
-                      </label>
-                    </div>
-                  </div>
-                  <div class="col-md-3 mb-4">
-                    <div class="form-check">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        value=""
-                        id="flexCheckGames"
-                      />  
-                      <label class="form-check-label" for="flexCheckGames">
-                        Games
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                    <h4>Other Services :</h4>
-                    <br/>
-                    <br/>
-                    <div class="col-md-4 mb-4"> 
-                    <div class="form-check">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        value=""
-                        id="flexCheckPhysicalInvitation"
-                      />
-                      <label class="form-check-label" for="flexCheckPhysicalInvitation">
-                        Physical Invitation
-                      </label>
-                    </div>
+                      <div class="col-md-4 mb-4">
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value=""
+                            id="flexCheckVideos"
+                          />
+                          <label class="form-check-label" for="flexCheckVideos">
+                            Videos
+                          </label>
+                        </div>
                       </div>
-                      
-                  <div class="col-md-4 mb-4">
-                    <div class="form-check">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        value=""
-                        id="flexCheckPhotography"
-                      />  
-                      <label class="form-check-label" for="flexCheckPhotography">
-                        Photography
-                      </label>
                     </div>
-                  </div>
-                  <div class="col-md-4 mb-4">
-                    <div class="form-check">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        value=""
-                        id="flexCheckDecoration"
-                      />  
-                      <label class="form-check-label" for="flexCheckDecoration">
-                        Decoration
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4 mb-4"> 
-                    <div class="form-check">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        value=""
-                        id="flexCheckCatering"
-                      />
-                      <label class="form-check-label" for="flexCheckCatering">
-                        Catering
-                      </label>
-                    </div>
+                    <div class="row">
+                      <h4>Shows</h4>
+                      <br />
+                      <br />
+                      <div class="col-md-3 mb-4">
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value=""
+                            id="flexCheckDance"
+                          />
+                          <label class="form-check-label" for="flexCheckDance">
+                            Dance
+                          </label>
+                        </div>
                       </div>
-                      
-                  <div class="col-md-4 mb-4">
-                    <div class="form-check">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        value=""
-                        id="flexCheckBeauty"
-                      />  
-                      <label class="form-check-label" for="flexCheckBeauty">
-                        Beauty
-                      </label>
+
+                      <div class="col-md-3 mb-4">
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value=""
+                            id="flexCheckMusic"
+                          />
+                          <label class="form-check-label" for="flexCheckMusic">
+                            Music
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-md-3 mb-4">
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value=""
+                            id="flexCheckMagic"
+                          />
+                          <label class="form-check-label" for="flexCheckMagic">
+                            Magic
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-md-3 mb-4">
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value=""
+                            id="flexCheckGames"
+                          />
+                          <label class="form-check-label" for="flexCheckGames">
+                            Games
+                          </label>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  <div class="col-md-4 mb-4">
-                    <div class="form-check">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        value=""
-                        id="flexCheckVenue"
-                      />  
-                      <label class="form-check-label" for="flexCheckVenue">
-                        Venue
-                      </label>
+                    <div class="row">
+                      <h4>Other Services :</h4>
+                      <br />
+                      <br />
+                      <div class="col-md-4 mb-4">
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value=""
+                            id="flexCheckPhysicalInvitation"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="flexCheckPhysicalInvitation"
+                          >
+                            Physical Invitation
+                          </label>
+                        </div>
+                      </div>
+
+                      <div class="col-md-4 mb-4">
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value=""
+                            id="flexCheckPhotography"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="flexCheckPhotography"
+                          >
+                            Photography
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-md-4 mb-4">
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value=""
+                            id="flexCheckDecoration"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="flexCheckDecoration"
+                          >
+                            Decoration
+                          </label>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-                <div class="form-group">
-                   <label for="exampleFormControlTextarea1">Special Services</label>
-                   <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                 </div>
+                    <div class="row">
+                      <div class="col-md-4 mb-4">
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value=""
+                            id="flexCheckCatering"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="flexCheckCatering"
+                          >
+                            Catering
+                          </label>
+                        </div>
+                      </div>
+
+                      <div class="col-md-4 mb-4">
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value=""
+                            id="flexCheckBeauty"
+                          />
+                          <label class="form-check-label" for="flexCheckBeauty">
+                            Beauty
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-md-4 mb-4">
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value=""
+                            id="flexCheckVenue"
+                          />
+                          <label class="form-check-label" for="flexCheckVenue">
+                            Venue
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleFormControlTextarea1">
+                        Special Services
+                      </label>
+                      <textarea
+                        class="form-control"
+                        id="exampleFormControlTextarea1"
+                        rows="3"
+                      ></textarea>
+                    </div>
 
                     <div class="d-flex justify-content-end pt-3">
                       <button type="button" class="btn btn-warning btn-lg ">
