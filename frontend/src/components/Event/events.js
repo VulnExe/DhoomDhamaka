@@ -1,10 +1,12 @@
-import React from 'react'
-import './events.css'
-import {Link} from "react-router-dom"
+import React from "react";
+import "./events.css";
+import { Link } from "react-router-dom";
+import Eventcarousel from "./carousel/eventcarousel";
+import Eventcard from "./cards/eventcard";
 export default function Events() {
   return (
-    
-    <div>
+    <div style={{backgroundColor: "#edeef0"}}>
+      {/* <div>
      <h1> Dummy events</h1>
     <div className='container'>
     <div className="row">
@@ -67,7 +69,9 @@ export default function Events() {
 </div>
 </div>
 </div>
-</div>
-
-  )
+</div> */}
+      <Eventcarousel />
+      <Eventcard />
+    </div>
+  );
 }

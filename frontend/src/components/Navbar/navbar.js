@@ -13,7 +13,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 // import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
-import { authActions } from "../store";
+import { authActions } from "../../store";
 const Navbar = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();  
@@ -38,11 +38,12 @@ const Navbar = () => {
       });
   };
   return (
-    <nav className=" navbar fixed-top  navbar-expand-lg mb-0 navbar-dark bg-light">
+    <nav className=" navbar fixed-top  navbar-expand-lg mb-0 navbar-light bg-light">
     <div className="container-fluid">
       <a className="navbar-brand  ms-5 text-white " href="#">
         {/* <WbIncandescentIcon className="fs-1 mt-2 pe-2" /> */}
-        <span className=" fs-5 text-primary fw-bold">Bandhan</span>
+        <img src="./dhoom.ico" style={{width:"45px"}} />
+        <span className=" fs-5 text-primary fw-bold" style={{ fontVariant:"small-caps" }}>Bandhan</span>
       </a>
       <button
         class="navbar-toggler"

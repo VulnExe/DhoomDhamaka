@@ -1,6 +1,5 @@
 import "./App.css";
 import Home from "./components/home/home";
-import Navbar from "./components/navbar";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Login from "./components/Login/login";
 import Register from "./components/Register/register";
@@ -21,6 +20,8 @@ import { useCallback, useEffect, useState } from "react";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { authActions } from "./store";
+import Footer from "./components/Footer/footer";
+import Navbar from "./components/Navbar/navbar";
 
 function App() {
   const dispatch = useDispatch()
@@ -78,14 +79,15 @@ function App() {
         <Route path="/passwordReset" element={<Passwordreset />}></Route>
         <Route path="/newPassword/:resetTok" element={<NewPassword />}></Route>
         <Route path="/becomevendor" element={<Becomevendor />}></Route>
-        <Route path="/birthday" element={<Birthday />}></Route>
+        {/* <Route path="/birthday" element={<Birthday />}></Route>
         <Route path="/babyshower" element={<Babyshower />}></Route>
         <Route path="/corporateevent" element={<Corporateevent />}></Route>
         <Route path="/engagement" element={<Engagement />}></Route>
         <Route path="/familyfunction" element={<Familyfunction />}></Route>
         <Route path="/postwedding" element={<Postwedding />}></Route>
         <Route path="/prewedding" element={<Prewedding />}></Route>
-        <Route path="/wedding" element={<Wedding />}></Route>
+      <Route path="/wedding" element={<Wedding />}></Route> */}
+      <Route path="/*" element={<Login />}></Route>
       </Routes>
     );
   }
@@ -95,6 +97,7 @@ function App() {
       <div className="App">
         <Navbar />
         <main>{loginRoutes}</main>
+        <Footer />
       </div>
     </Router>
   );

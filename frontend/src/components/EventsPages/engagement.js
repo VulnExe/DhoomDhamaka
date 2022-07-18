@@ -35,7 +35,7 @@ export default function Engagement() {
                   class="list-group-item list-group-item-action py-2 ripple active"
                 >
                   <i class="fas fa-chart-area fa-fw me-3"></i>
-                  <span>Webiste traffic</span>
+                  <span>Profile</span>
                 </a>
                 <a
                   id="v-tabs-messages-tab"
@@ -47,7 +47,7 @@ export default function Engagement() {
                   class="list-group-item list-group-item-action py-2 ripple"
                 >
                   <i class="fas fa-lock fa-fw me-3"></i>
-                  <span>Password</span>
+                  <span>Events</span>
                 </a>
                 <a
                   id="v-tabs-messages-tab"
@@ -59,7 +59,7 @@ export default function Engagement() {
                   class="list-group-item list-group-item-action py-2 ripple"
                 >
                   <i class="fas fa-chart-line fa-fw me-3"></i>
-                  <span>Analytics</span>
+                  <span>To-Do </span>
                 </a>
                 <>
                   {/* <a href="#" class="list-group-item list-group-item-action py-2 ripple">
@@ -122,7 +122,7 @@ export default function Engagement() {
             >
               <div className="row mt-3">
                 <div className="col-md-5 ms-5">
-                  <div class="card">
+                  <div class="card mb-9">
                     <div class="card-body">
                       <div class="d-flex flex-column align-items-center text-center">
                         <img
@@ -149,20 +149,20 @@ export default function Engagement() {
               </div>
             </div>
             <div
-              class="tab-pane fade"
+              class="tab-pane fade mb-14"
               id="v-tabs-profile"
               role="tabpanel"
               aria-labelledby="v-tabs-profile-tab"
             >
-              Profile content
+              event content
             </div>
             <div
-              class="tab-pane fade"
+              class="tab-pane fade mb-13"
               id="v-tabs-messages"
               role="tabpanel"
               aria-labelledby="v-tabs-messages-tab"
             >
-              Messages content
+              todo content
             </div>
           </div>
           {/* <!-- Tab content --> */}
