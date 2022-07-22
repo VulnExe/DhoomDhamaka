@@ -2,13 +2,13 @@
 .carousel-inner,
 .carousel-item,
 .carousel-item.active {
-    height: 85vh;
+    /* height: 85vh; */
 }
 
 .carousel-item:nth-child(1) {
     /* background-image: url('https://mdbootstrap.com/img/Photos/Others/images/76.jpg'); */
     /* background-image: url('https://i.postimg.cc/Jn0X0pDS/1.jpg'); */
-    background-image: url('https://bit.ly/3PgHvEV');
+     /* background-image: url('https://bit.ly/3PgHvEV'); */
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -18,7 +18,7 @@
     /* background-image: url('https://mdbootstrap.com/img/Photos/Others/images/77.jpg'); */
     /* background-image: url("https://i.postimg.cc/SQXZtrTZ/2.jpg"); */
     /* background-image: url('https://c4.wallpaperflare.com/wallpaper/222/981/89/candles-cake-cake-bokeh-wallpaper-preview.jpg'); */
-    background-image: url('https://wallpapercave.com/wp/wp2749902.jpg');
+     /* background-image: url('https://wallpapercave.com/wp/wp2749902.jpg'); */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -27,7 +27,7 @@
 .carousel-item:nth-child(3) {
     /* background-image: url('https://mdbootstrap.com/img/Photos/Others/images/78.jpg'); */
     /* background-image: url('https://i.postimg.cc/Jh4x3cH5/3.jpg'); */
-    background-image: url('https://www.teahub.io/photos/full/143-1439591_happy-birthday-wishes-images-happy-birthday-nanba-quotes.png');
+        /* background-image: url('https://www.teahub.io/photos/full/143-1439591_happy-birthday-wishes-images-happy-birthday-nanba-quotes.png'); */
     /* background: -webkit-linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)), url("https://www.teahub.io/photos/full/143-1439591_happy-birthday-wishes-images-happy-birthday-nanba-quotes.png");
     background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)), url("https://www.teahub.io/photos/full/143-1439591_happy-birthday-wishes-images-happy-birthday-nanba-quotes.png"); */
     /* The least supported option. */
@@ -47,7 +47,7 @@
     .carousel-inner,
     .carousel-item,
     .carousel-item.active {
-        /* height: 50vh; */
+        height: 80vh;
     }
 }
 
@@ -128,4 +128,5 @@
 .carousel {
     width: 98%;
     margin: auto;
+    margin-top: 14px;
 }

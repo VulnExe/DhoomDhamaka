@@ -1,13 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import "./birthdayform.css";
 
 function Birthdayform() {
+  const [checkedVenue, setCheckedVenue] = useState(false);
   return (
     <section class="h-100">
       <div class="container py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
-          <div class="col">
-            <div class="card shadow-5-strong card-registration my-4">
+          <div class="col-md-11">
+            <div class="card shadow-5-strong bdyCard card-registration my-4">
               <div class="row g-0">
                 <div class="col-xl-6  d-none d-xl-block">
                   {/* <img
@@ -271,12 +272,12 @@ function Birthdayform() {
 
                     <div class="form-floating mb-4">
                       <input
-                        type="address"
+                        type="city"
                         class="form-control"
                         id="floatingInput"
                         placeholder="address"
                       />
-                      <label for="floatingInput">Address</label>
+                      <label for="floatingInput">City</label>
                     </div>
 
                     {/* <div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
@@ -322,7 +323,7 @@ function Birthdayform() {
                       </div>
                     </div> */}
                     <div class="btn-group mb-4">
-                    <input
+                      <input
                         type="radio"
                         class="btn-check"
                         name="options"
@@ -339,7 +340,6 @@ function Birthdayform() {
                         name="options"
                         id="option11"
                         autocomplete="off"
-                        
                       />
                       <label class="btn btn-primary" for="option11">
                         Male
@@ -573,6 +573,10 @@ function Birthdayform() {
                             class="form-check-input"
                             type="checkbox"
                             value=""
+                            checked={checkedVenue}
+                            onChange={() => {
+                              setCheckedVenue(!checkedVenue);
+                            }}
                             id="flexCheckVenue"
                           />
                           <label class="form-check-label" for="flexCheckVenue">
@@ -581,6 +585,101 @@ function Birthdayform() {
                         </div>
                       </div>
                     </div>
+                    {checkedVenue && (
+                      <div>
+                        <div className="row">
+                        <div className=" col-md-6 mb-4">
+                          <div class="form-floating mb-3">
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="floatingInput"
+                              placeholder="Name"
+                              // disabled={!checkedVenue}
+                            />
+                            <label for="floatingInput" disabled={!checkedVenue}>
+                              Venue 1 Name
+                            </label>
+                          </div>
+                        </div>
+                        <div className=" col-md-6 mb-4">
+                          <div class="form-floating mb-3">
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="floatingInput"
+                              placeholder="Name"
+                              // disabled={!checkedVenue}
+                            />
+                            <label for="floatingInput" disabled={!checkedVenue}>
+                              Venue 1 Place
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                        <div className="row">
+                        <div className=" col-md-6 mb-4">
+                          <div class="form-floating mb-3">
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="floatingInput"
+                              placeholder="Name"
+                              // disabled={!checkedVenue}
+                            />
+                            <label for="floatingInput" disabled={!checkedVenue}>
+                              Venue 2 Name
+                            </label>
+                          </div>
+                        </div>
+                        <div className=" col-md-6 mb-4">
+                          <div class="form-floating mb-3">
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="floatingInput"
+                              placeholder="Name"
+                              // disabled={!checkedVenue}
+                            />
+                            <label for="floatingInput" disabled={!checkedVenue}>
+                            Venue 2 Place
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                        <div className="row">
+                        <div className=" col-md-6 mb-4">
+                          <div class="form-floating mb-3">
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="floatingInput"
+                              placeholder="Name"
+                              // disabled={!checkedVenue}
+                            />
+                            <label for="floatingInput" disabled={!checkedVenue}>
+                            Venue 3 Name
+                            </label>
+                          </div>
+                        </div>
+                        <div className=" col-md-6 mb-4">
+                          <div class="form-floating mb-3">
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="floatingInput"
+                              placeholder="Name"
+                              // disabled={!checkedVenue}
+                            />
+                            <label for="floatingInput" disabled={!checkedVenue}>
+                            Venue 3 Name
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      </div>
+                    )}
+
                     <div class="form-group">
                       <label for="exampleFormControlTextarea1" className="fs-5">
                         Special Services

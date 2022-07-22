@@ -4,7 +4,7 @@ import React from 'react'
 
 function Birthdayportfolio() {
   return (
-    <>
+    <div>
     <div class="container" >
     <h2 class="text-center display-3" style={{padding:"70px"}}> portfolio</h2>
     </div>
@@ -73,7 +73,7 @@ function Birthdayportfolio() {
 
 
     </div>
-    </>
+    </div>
   )
 }
 

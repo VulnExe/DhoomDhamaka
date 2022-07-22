@@ -13,12 +13,13 @@ function Birthdaycarousel() {
       <div class="carousel-inner rounded-5 shadow-4-strong">
         {/* <!-- first item  --> */}
         <div class="carousel-item hover-zoom active ">
-          {/* <img
+          <img
             alt="First slide"
             class="d-block w-100"
-            src="https://i.postimg.cc/Jn0X0pDS/1.jpg"
+            // src="https://i.postimg.cc/Jn0X0pDS/1.jpg"
             src="https://bit.ly/3PgHvEV"
-          /> */}
+            // style={{maxWidth:"100%", maxHeight:"100%"}}
+          />
           <div
             class="mask"
             style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
@@ -71,11 +72,12 @@ function Birthdaycarousel() {
         </div>
         {/* <!-- second item  --> */}
         <div class="carousel-item">
-          {/* <img
+          <img
             alt="Second slide"
             class="d-block w-100"
-            src="https://i.postimg.cc/SQXZtrTZ/2.jpg"
-          /> */}
+            // src="https://i.postimg.cc/SQXZtrTZ/2.jpg"
+            src="https://wallpapercave.com/wp/wp2749902.jpg"
+          />
           <div
             class="mask"
             style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
@@ -127,17 +129,18 @@ function Birthdaycarousel() {
         </div>
         {/* <!-- third item  --> */}
         <div class="carousel-item">
-          {
-            /* <img
+          
+             <img
             alt="Third slide"
             class="d-block w-100"
-            src="https://i.postimg.cc/Jh4x3cH5/3.jpg"
-          /> */
+            // src="https://i.postimg.cc/Jh4x3cH5/3.jpg"
+            src="https://bit.ly/3aNw5K5"
+          /> 
             <div
               class="mask"
               style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
             ></div>
-          }
+          
           <div class="carousel-caption  d-md-block">
             <h5
               class="animated zoomIn d-none d-md-block"
