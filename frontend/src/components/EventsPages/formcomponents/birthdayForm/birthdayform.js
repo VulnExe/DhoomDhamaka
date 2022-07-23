@@ -378,8 +378,26 @@ function Birthdayform() {
                           <label for="floatingInput">Age</label>
                         </div>
                       </div>
+                      
                     </div>
                     <div class="row">
+                      <div class="col-md-6 mb-4">
+                        <div class="form-floating mb-3">
+                          <input
+                            type="number"
+                            class="form-control"
+                            id="floatingInput"
+                            placeholder="To"
+                          />
+                          <label for="floatingInput">No of Guests</label>
+                        </div>
+                      </div>
+                      
+                    </div>
+
+
+                    
+                    {/* <div class="row">
                       <h4 className="fw-bold ">E-Invitation</h4>
                       <br />
                       <br />
@@ -423,7 +441,7 @@ function Birthdayform() {
                           </label>
                         </div>
                       </div>
-                    </div>
+                    </div> */}
                     <div class="row">
                       <h4 className="fw-bold ">Shows</h4>
                       <br />
@@ -503,7 +521,7 @@ function Birthdayform() {
                         </div>
                       </div>
 
-                      <div class="col-md-4 mb-4">
+                      {/* <div class="col-md-4 mb-4">
                         <div class="form-check">
                           <input
                             class="form-check-input"
@@ -518,7 +536,34 @@ function Birthdayform() {
                             Photography
                           </label>
                         </div>
-                      </div>
+                      </div> */}
+
+
+                      {/* Photography options */}
+                      <div class="dropdown">
+  <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
+    data-mdb-toggle="dropdown" aria-expanded="false">
+   Photograpgy
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <li><a class="dropdown-item" href="#">candid</a></li>
+    <li>
+      <a class="dropdown-item" href="#">Regular Photography</a>
+    </li>
+    <li>
+      <a class="dropdown-item" href="#">Cinematography</a>
+    </li>
+    <li>
+      <a class="dropdown-item" href="#">Video</a>
+    </li>
+    <li>
+      <a class="dropdown-item" href="#">Drone Video</a>
+    </li>
+    
+  </ul>
+</div>
+
+
                       <div class="col-md-4 mb-4">
                         <div class="form-check">
                           <input
