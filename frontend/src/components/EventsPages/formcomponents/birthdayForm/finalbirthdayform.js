@@ -1,9 +1,11 @@
-import React, { useState } from "react";
-// import "./birthdayform.css";
+import React from "react";
+// import React, { useState } from "react";
+import { useState } from "react";
+import "./birthdayform.css";
 import MultiSelect from "react-multiple-select-dropdown-lite";
 import "react-multiple-select-dropdown-lite/dist/index.css";
 
-function EngagementForm() {
+function Finalbirthdayform() {
   const [value, setvalue] = useState("");
   const handleOnchange = (val) => {
     setvalue(val);
@@ -20,7 +22,6 @@ function EngagementForm() {
   const handlemusicchange = (val) => {
     setmusicvalue(val);
   };
-
   //music options end
 
   //photography option start
@@ -51,32 +52,6 @@ function EngagementForm() {
    ]
 
   //invitation ends
-
-  //Beauty start 
-   const [checkedBeauty, setCheckedBeauty] =useState("");
-   const handleBeauty = (val)=>{
-    setCheckedBeauty(val)
-   };
-   const beautyoptions = [
-    { label: "Bride", value: "Bride" },
-    { label: "Groom", value: "Groom" },
-    { label: "Family", value: "Family" },
-   ]
-
-  // Beauty ends
-
-  // Mehandi starts
-  const [checkedMehandi, setCheckedMehandi] =useState("");
-  const handleMehandi = (val)=>{
-   setCheckedMehandi(val)
-  };
-  const mehandioptions = [
-   { label: "Bride", value: "Bride" },
-   { label: "Groom", value: "Groom" },
-   { label: "Family", value: "Family" },
-  ]
-  //mehandi ends
-
   //decoration start
 
   const [decorationvalue, setdecorationvalue] = useState("");
@@ -92,7 +67,6 @@ function EngagementForm() {
     { label: "Indoor Decoration", value: "Indoor Decoration" },
     { label: "Outdoor Decoration", value: "Outdoor Decoration" },
     { label: "Lightning Decoration", value: "Lightning Decoration" },
-    { label: "Real Flower Decoration", value: "Real Flower Decoration" },
   ];
 
   //decoration ends
@@ -328,7 +302,7 @@ function EngagementForm() {
                           />
                           <label for="floatingInput">
                             {" "}
-                             person name
+                            Birthday person name
                           </label>
                         </div>
                       </div>
@@ -345,7 +319,7 @@ function EngagementForm() {
                       </div>
                     </div>
 
-                    {/* <div class="row">
+                    <div class="row">
                       <div class="col-md-6 mb-4">
                         <div class="form-floating mb-3">
                           <input
@@ -368,7 +342,7 @@ function EngagementForm() {
                           <label for="floatingInput">To</label>
                         </div>
                       </div>
-                    </div> */}
+                    </div>
 
                     <div class="form-floating mb-4">
                       <input
@@ -467,7 +441,7 @@ function EngagementForm() {
         <div class="card">
           <form>
             <div class="card-header py-4 px-5 bg-light border-0">
-              <h4 class="mb-0 fw-bold">Engagement Event Booking</h4>
+              <h4 class="mb-0 fw-bold">Birthday Event Booking</h4>
             </div>
 
             <div class="card-body px-5">
@@ -480,7 +454,7 @@ function EngagementForm() {
                   <div class="row"></div>
 
                   <div class="row">
-                    {/* <div class="col-md-3">
+                    <div class="col-md-3">
                       <div class="mb-3">
                         <label
                           for="games"
@@ -496,25 +470,25 @@ function EngagementForm() {
                           id="games"
                         />
                       </div>
-                    </div> */}
-                    <div class="col-md-4">
+                    </div>
+                    <div class="col-md-3">
                       <div class="mb-3">
                         <label
-                          for="Sangeetchoreography"
+                          for="magic"
                           class="form-check-label"
                           value=""
                           style={{ marginRight: "15px" }}
                         >
-                          Sangeet Choreography{" "}
+                          Magic{" "}
                         </label>
                         <input
                           type="checkbox"
                           class="form-check-input"
-                          id="Sangeetchoreography"
+                          id="magic"
                         />
                       </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                       <div class="mb-3">
                         <label
                           for="music"
@@ -535,7 +509,7 @@ function EngagementForm() {
                         />
                       </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                       <div class="mb-3">
                         <label
                           for="dance"
@@ -694,12 +668,11 @@ function EngagementForm() {
                             aria-label="Default select example"
                           >
                             <option selected value="1">
-                              Romantic Decoration
+                              Ballon Decoration
                             </option>
-                            <option value="2">Musical Decoration</option>
-                            <option value="3">Retro Decoration</option>
-                            <option value="4">Single Color Decoration</option>
-                            <option value="5">Multi Color Decoration</option>
+                            <option value="2">Candy Decoration</option>
+                            <option value="3">Cartoon Decoration</option>
+                            <option value="4">Jungle Party Decoration</option>
                           </select>
                         </div>
                       </div>
@@ -839,7 +812,7 @@ function EngagementForm() {
                           value=""
                           style={{ marginRight: "15px" }}
                         >
-                          Pooja Pandit Ji{" "}
+                          Beauty{" "}
                         </label>
                         <input
                           type="checkbox"
@@ -886,48 +859,6 @@ function EngagementForm() {
                           checked={checkedPhotography}
                           onChange={() => {
                             setCheckedPhotography(!checkedPhotography);
-                          }}
-                        />
-                      </div>
-                    </div>
-                    <div class="col-md-3">
-                      <div class="mb-3">
-                        <label
-                          for="Beauty"
-                          class="form-check-label"
-                          value=" "
-                          style={{ marginRight: "15px" }}
-                        >
-                          Beauty{" "}
-                        </label>
-                        <input
-                          type="checkbox"
-                          class="form-check-input"
-                          id="Beauty"
-                          checked={checkedBeauty}
-                          onChange={() => {
-                            setCheckedBeauty(!checkedBeauty);
-                          }}
-                        />
-                      </div>
-                    </div>
-                    <div class="col-md-3">
-                      <div class="mb-3">
-                        <label
-                          for="Mehandi"
-                          class="form-check-label"
-                          value=" "
-                          style={{ marginRight: "15px" }}
-                        >
-                          Mehandi{" "}
-                        </label>
-                        <input
-                          type="checkbox"
-                          class="form-check-input"
-                          id="Mehandi"
-                          checked={checkedMehandi}
-                          onChange={() => {
-                            setCheckedMehandi(!checkedMehandi);
                           }}
                         />
                       </div>
@@ -1048,7 +979,7 @@ function EngagementForm() {
                       <h5>
                         <strong>Photography</strong>
                       </h5>
-                      {checkedBeauty}
+                      {photovalue}
                     </div>
 
                     <MultiSelect
@@ -1057,44 +988,9 @@ function EngagementForm() {
                     />
                   </div>
                   )}
-                  { checkedBeauty && (
-                  <div>
-                    <div className="preview-values">
-                      <h5>
-                        <strong>Beauty</strong>
-                      </h5>
-                      {}
-                    </div>
-
-                    <MultiSelect
-                      onChange={handleBeauty}
-                      options={beautyoptions}
-                    />
-                  </div>
-                  )}
-                  { checkedMehandi && (
-                  <div>
-                    <div className="preview-values">
-                      <h5>
-                        <strong>Mehandi</strong>
-                      </h5>
-                      {}
-                    </div>
-
-                    <MultiSelect
-                      onChange={handleMehandi}
-                      options={mehandioptions}
-                    />
-                  </div>
-                  )}
-
-                  
                 </div>
-                
                   
               </div>
-    
-             
 
               {/* other events end */}
 
@@ -1191,4 +1087,4 @@ function EngagementForm() {
   );
 }
 
-export default EngagementForm;
+export default Finalbirthdayform;
