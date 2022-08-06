@@ -3,13 +3,12 @@ import React, { useState } from "react";
 import MultiSelect from "react-multiple-select-dropdown-lite";
 import "react-multiple-select-dropdown-lite/dist/index.css";
 
-function EngagementForm() {
+function CorporateForm() {
   const [value, setvalue] = useState("");
   const handleOnchange = (val) => {
     setvalue(val);
   };
   const options = [
-    { label: "Folk", value: "Folk" },
     { label: "Indian", value: "Indian" },
     { label: "Western", value: "Western" },
   ];
@@ -20,9 +19,14 @@ function EngagementForm() {
   const handlemusicchange = (val) => {
     setmusicvalue(val);
   };
+  const liveoptions = [
+    { label: "Indian", value: "Indian" },
+    { label: "Western", value: "Western" },
+  ];
 
   //music options end
 
+//play end
   //photography option start
 
   const [photovalue, setphotovalue] = useState("");
@@ -117,7 +121,7 @@ function EngagementForm() {
   ];
 
   //catering ends
-  
+
   const [checkedMusic, setCheckedMusic] = useState(false);
   const [checkedDance, setCheckedDance] = useState(false);
   const [checkedVenue, setCheckedVenue] = useState(false);
@@ -125,6 +129,7 @@ function EngagementForm() {
   const [checkedRegulardecoration, setcheckedRegulardecoration] = useState(false);
   const [checkedInvitation, setCheckedInvitation] = useState(false)
   const [checkedPhotography, setCheckedPhotography] = useState(false)
+  const [checkedPlay, setCheckedPlay] = useState("false");
 
   return (
     <section class="h-50">
@@ -328,7 +333,7 @@ function EngagementForm() {
                           />
                           <label for="floatingInput">
                             {" "}
-                             person name
+                            Name of the Event
                           </label>
                         </div>
                       </div>
@@ -369,7 +374,7 @@ function EngagementForm() {
                         </div>
                       </div>
                     </div>
-
+                    {/* <div class="col-md-6 mb-4"> */}
                     <div class="form-floating mb-4">
                       <input
                         type="city"
@@ -377,10 +382,13 @@ function EngagementForm() {
                         id="floatingInput"
                         placeholder="address"
                       />
-                      <label for="floatingInput">City</label>
+                      <label for="floatingInput">Name of the concern / Organisation</label>
                     </div>
+                    
+                        
+                        {/* </div> */}
 
-                    <div class="btn-group mb-4">
+                    {/* <div class="btn-group mb-4">
                       <input
                         type="radio"
                         class="btn-check"
@@ -423,9 +431,9 @@ function EngagementForm() {
                       <label class="btn btn-primary" for="option3">
                         Others
                       </label>
-                    </div>
+                    </div> */}
                     <div class="row">
-                      <div class="col-md-6 mb-4">
+                      {/* <div class="col-md-6 mb-4">
                         <div class="form-floating mb-3">
                           <input
                             type="number"
@@ -435,7 +443,27 @@ function EngagementForm() {
                           />
                           <label for="floatingInput">Age</label>
                         </div>
-                      </div>
+                      </div> */}
+                      <div class="col-md-6 mb-4">
+                      <div class="form-floating mb-4">
+                          <label for="exampleInput5" class="form-label">Type of event</label>
+                          <select
+                            id="exampleInput5"
+                            class="form-select mb-4"
+                            aria-label="Default select example"
+                          >
+                          <option value="0"></option>
+                            <option  value="1">
+                              School
+                            </option>
+                            <option value="2">College</option>
+                            <option value="3">corporate</option>
+                            
+                            
+                          </select>
+                        </div>
+                        </div>
+                      
                       <div class="col-md-6 mb-4">
                         <div class="form-floating mb-3">
                           <input
@@ -467,7 +495,7 @@ function EngagementForm() {
         <div class="card">
           <form>
             <div class="card-header py-4 px-5 bg-light border-0">
-              <h4 class="mb-0 fw-bold">Engagement Event Booking</h4>
+              <h4 class="mb-0 fw-bold">Corporate Event Booking</h4>
             </div>
 
             <div class="card-body px-5">
@@ -477,43 +505,10 @@ function EngagementForm() {
                 </div>
 
                 <div class="col-md-9">
-                  <div class="row"></div>
+                  
 
                   <div class="row">
-                    {/* <div class="col-md-3">
-                      <div class="mb-3">
-                        <label
-                          for="games"
-                          class="form-check-label"
-                          value=""
-                          style={{ marginRight: "15px" }}
-                        >
-                          Games{" "}
-                        </label>
-                        <input
-                          type="checkbox"
-                          class="form-check-input"
-                          id="games"
-                        />
-                      </div>
-                    </div> */}
-                    <div class="col-md-4">
-                      <div class="mb-3">
-                        <label
-                          for="Sangeetchoreography"
-                          class="form-check-label"
-                          value=""
-                          style={{ marginRight: "15px" }}
-                        >
-                          Sangeet Choreography{" "}
-                        </label>
-                        <input
-                          type="checkbox"
-                          class="form-check-input"
-                          id="Sangeetchoreography"
-                        />
-                      </div>
-                    </div>
+                   
                     <div class="col-md-4">
                       <div class="mb-3">
                         <label
@@ -556,7 +551,68 @@ function EngagementForm() {
                         />
                       </div>
                     </div>
+                    <div class="col-md-4">
+                      <div class="mb-3">
+                        <label
+                          for="Play"
+                          class="form-check-label"
+                          value=""
+                          style={{ marginRight: "15px" }}
+                        >
+                          Play{" "}
+                        </label>
+                        <input
+                          type="checkbox"
+                          class="form-check-input"
+                          id="Play"
+                          checked={checkedPlay}
+                          onChange={() => {
+                            setCheckedPlay(!checkedPlay);
+                          }}
+                        />
+                      </div>
+                    </div>
                   </div>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="mb-3">
+                        <label
+                          for="Stand-upComedy"
+                          class="form-check-label"
+                          value=""
+                          style={{ marginRight: "15px" }}
+                        >
+                          Stand-up Comedy{" "}
+                        </label>
+                        <input
+                          type="checkbox"
+                          class="form-check-input"
+                          id="Stand-upComedy"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="mb-3">
+                        <label
+                          for="Motivational Speech"
+                          class="form-check-label"
+                          value=""
+                          style={{ marginRight: "15px" }}
+                        >
+                          Motivational Speech{" "}
+                        </label>
+                        <input
+                          type="checkbox"
+                          class="form-check-input"
+                          id="Motivational Speech"
+                        />
+                      </div>
+                    </div>
+
+                  </div>
+
+
+
                   {checkedMusic && (
                     <div class="row">
                       <div class="mb-3">
@@ -569,11 +625,11 @@ function EngagementForm() {
 
                         <MultiSelect
                           onChange={handlemusicchange}
-                          options={options}
+                          options={liveoptions}
                         />
                       </div>
 
-                      <div class="col-md-3">
+                      {/* <div class="col-md-3">
                         <div class="mb-3">
                           <label
                             for="dj"
@@ -589,10 +645,10 @@ function EngagementForm() {
                             id="dj"
                           />
                         </div>
-                      </div>
+                      </div> */}
                     </div>
                   )}
-
+                  
                   {checkedDance && (
                     <div>
                       <div className="preview-values">
@@ -608,6 +664,26 @@ function EngagementForm() {
                       />
                     </div>
                   )}
+                  <br></br>
+                  {checkedPlay && (
+                      <div class="col-md-6">
+                        <div class="mb-3">
+                          <label for="plays" class="form-label"><strong>Play</strong></label>
+                          <select
+                            id="plays"
+                            class="form-select mb-3"
+                            aria-label="Default select example"
+                          >
+                            <option selected value="1">
+                              Corporate
+                            </option>
+                            <option value="2">Street Play</option>
+                            
+                            
+                          </select>
+                        </div>
+                      </div>
+                    )}
                 </div>
               </div>
 
@@ -646,7 +722,7 @@ function EngagementForm() {
                         />
                       </div>
                     </div>
-                    <div class="col-md-6">
+                    {/* <div class="col-md-6">
                       <div class="mb-3">
                         <br />
                         <label
@@ -667,7 +743,7 @@ function EngagementForm() {
                           }}
                         />
                       </div>
-                    </div>
+                    </div> */}
 
                     {checkedRegulardecoration && (
                       <div class="col-md-6">
@@ -833,7 +909,7 @@ function EngagementForm() {
                         />
                       </div>
                     </div>
-                    <div class="col-md-3">
+                    {/* <div class="col-md-3">
                       <div class="mb-3">
                         <label
                           for="beauty"
@@ -849,7 +925,7 @@ function EngagementForm() {
                           id="beauty"
                         />
                       </div>
-                    </div>
+                    </div> */}
                     <div class="col-md-3">
                       <div class="mb-3">
                         <label
@@ -892,7 +968,7 @@ function EngagementForm() {
                         />
                       </div>
                     </div>
-                    <div class="col-md-3">
+                    {/* <div class="col-md-3">
                       <div class="mb-3">
                         <label
                           for="Beauty"
@@ -912,8 +988,8 @@ function EngagementForm() {
                           }}
                         />
                       </div>
-                    </div>
-                    <div class="col-md-3">
+                    </div> */}
+                    {/* <div class="col-md-3">
                       <div class="mb-3">
                         <label
                           for="Mehandi"
@@ -933,7 +1009,7 @@ function EngagementForm() {
                           }}
                         />
                       </div>
-                    </div>
+                    </div> */}
                     <div class="col-md-3">
                       <div class="mb-3">
                         <label
@@ -1210,4 +1286,4 @@ function EngagementForm() {
   );
 }
 
-export default EngagementForm;
+export default CorporateForm;

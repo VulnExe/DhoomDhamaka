@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import MultiSelect from "react-multiple-select-dropdown-lite";
 import "react-multiple-select-dropdown-lite/dist/index.css";
 
-function EngagementForm() {
+function FamilyfunctionForm() {
   const [value, setvalue] = useState("");
   const handleOnchange = (val) => {
     setvalue(val);
@@ -117,7 +117,7 @@ function EngagementForm() {
   ];
 
   //catering ends
-  
+
   const [checkedMusic, setCheckedMusic] = useState(false);
   const [checkedDance, setCheckedDance] = useState(false);
   const [checkedVenue, setCheckedVenue] = useState(false);
@@ -328,19 +328,19 @@ function EngagementForm() {
                           />
                           <label for="floatingInput">
                             {" "}
-                             person name
+                            Name of the Function
                           </label>
                         </div>
                       </div>
                       <div class="col-md-6 mb-4">
                         <div class="form-floating mb-3">
                           <input
-                            type="date"
+                            type="number"
                             class="form-control"
                             id="floatingInput"
                             placeholder="Date"
                           />
-                          <label for="floatingInput">Date</label>
+                          <label for="floatingInput">No of days</label>
                         </div>
                       </div>
                     </div>
@@ -349,7 +349,7 @@ function EngagementForm() {
                       <div class="col-md-6 mb-4">
                         <div class="form-floating mb-3">
                           <input
-                            type="time"
+                            type="date"
                             class="form-control"
                             id="floatingInput"
                             placeholder="From"
@@ -360,7 +360,7 @@ function EngagementForm() {
                       <div class="col-md-6 mb-4">
                         <div class="form-floating mb-3">
                           <input
-                            type="time"
+                            type="date"
                             class="form-control"
                             id="floatingInput"
                             placeholder="To"
@@ -369,7 +369,7 @@ function EngagementForm() {
                         </div>
                       </div>
                     </div>
-
+                    {/* <div class="col-md-6 mb-4"> */}
                     <div class="form-floating mb-4">
                       <input
                         type="city"
@@ -377,10 +377,13 @@ function EngagementForm() {
                         id="floatingInput"
                         placeholder="address"
                       />
-                      <label for="floatingInput">City</label>
+                      <label for="floatingInput">Name of the concern / Organisation</label>
                     </div>
+                    
+                        
+                        {/* </div> */}
 
-                    <div class="btn-group mb-4">
+                    {/* <div class="btn-group mb-4">
                       <input
                         type="radio"
                         class="btn-check"
@@ -423,9 +426,9 @@ function EngagementForm() {
                       <label class="btn btn-primary" for="option3">
                         Others
                       </label>
-                    </div>
+                    </div> */}
                     <div class="row">
-                      <div class="col-md-6 mb-4">
+                      {/* <div class="col-md-6 mb-4">
                         <div class="form-floating mb-3">
                           <input
                             type="number"
@@ -435,7 +438,25 @@ function EngagementForm() {
                           />
                           <label for="floatingInput">Age</label>
                         </div>
-                      </div>
+                      </div> */}
+                      <div class="col-md-6 mb-4">
+                      <div class="form-floating mb-4">
+                          <label for="exampleInput5" class="form-label">Type of Function</label>
+                          <select
+                            id="exampleInput5"
+                            class="form-select mb-4"
+                            aria-label="Default select example"
+                          >
+                          <option value="0"></option>
+                            
+                            <option value="2">Festival</option>
+                            <option value="3">Non-Festival</option>
+                            
+                            
+                          </select>
+                        </div>
+                        </div>
+                      
                       <div class="col-md-6 mb-4">
                         <div class="form-floating mb-3">
                           <input
@@ -467,7 +488,7 @@ function EngagementForm() {
         <div class="card">
           <form>
             <div class="card-header py-4 px-5 bg-light border-0">
-              <h4 class="mb-0 fw-bold">Engagement Event Booking</h4>
+              <h4 class="mb-0 fw-bold">Family Function Booking</h4>
             </div>
 
             <div class="card-body px-5">
@@ -514,6 +535,40 @@ function EngagementForm() {
                         />
                       </div>
                     </div>
+                    <div class="col-md-4">
+                      <div class="mb-3">
+                        <label
+                          for="DevotionalMusic"
+                          class="form-check-label"
+                          value=""
+                          style={{ marginRight: "15px" }}
+                        >
+                          Devotional Music{" "}
+                        </label>
+                        <input
+                          type="checkbox"
+                          class="form-check-input"
+                          id="DevotionalMusic"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="mb-3">
+                        <label
+                          for="DevotionalPlay"
+                          class="form-check-label"
+                          value=""
+                          style={{ marginRight: "15px" }}
+                        >
+                          Devotional Play{" "}
+                        </label>
+                        <input
+                          type="checkbox"
+                          class="form-check-input"
+                          id="DevotionalPlay"
+                        />
+                      </div>
+                      </div>
                     <div class="col-md-4">
                       <div class="mb-3">
                         <label
@@ -694,13 +749,14 @@ function EngagementForm() {
                             aria-label="Default select example"
                           >
                             <option selected value="1">
-                              Romantic Decoration
+                              Devotional Decoration
                             </option>
                             <option value="2">Musical Decoration</option>
-                            <option value="3">Retro Decoration</option>
+                            <option value="3">Fairy Tale Decoration</option>
                             <option value="4">Single Color Decoration</option>
                             <option value="5">Multi Color Decoration</option>
                             <option value="6">Traditional decoration</option>
+                            <option value="7">Retro decoration</option>
                             
                           </select>
                         </div>
@@ -1077,34 +1133,32 @@ function EngagementForm() {
                   </div>
                   )}
                   { checkedBeauty && (
-                  <div>
-                    <div className="preview-values">
-                      <h5>
-                        <strong>Beauty</strong>
-                      </h5>
-                      {}
+                    <div class="col-md-4">
+                      <div class="mb-3">
+                        <label for="countofbeauty" class="form-label">
+                          No of Persons (beauty)
+                        </label>
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="countofbeauty"
+                        />
+                      </div>
                     </div>
-
-                    <MultiSelect
-                      onChange={handleBeauty}
-                      options={beautyoptions}
-                    />
-                  </div>
                   )}
                   { checkedMehandi && (
-                  <div>
-                    <div className="preview-values">
-                      <h5>
-                        <strong>Mehandi</strong>
-                      </h5>
-                      {}
+                    <div class="col-md-4">
+                      <div class="mb-3">
+                        <label for="countmehandi" class="form-label">
+                          No of Persons (mehandi)
+                        </label>
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="countmehandi"
+                        />
+                      </div>
                     </div>
-
-                    <MultiSelect
-                      onChange={handleMehandi}
-                      options={mehandioptions}
-                    />
-                  </div>
                   )}
 
                   
@@ -1210,4 +1264,4 @@ function EngagementForm() {
   );
 }
 
-export default EngagementForm;
+export default FamilyfunctionForm;

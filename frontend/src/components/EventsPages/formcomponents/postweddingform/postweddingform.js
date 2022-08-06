@@ -1,17 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
+import { useState } from "react";
 // import "./birthdayform.css";
 import MultiSelect from "react-multiple-select-dropdown-lite";
 import "react-multiple-select-dropdown-lite/dist/index.css";
 
-function EngagementForm() {
+function PostweddingForm() {
   const [value, setvalue] = useState("");
   const handleOnchange = (val) => {
     setvalue(val);
   };
   const options = [
-    { label: "Folk", value: "Folk" },
+    
     { label: "Indian", value: "Indian" },
-    { label: "Western", value: "Western" },
+    { label: "Folk", value: "Folk" },
   ];
   // dance option end
 
@@ -20,7 +21,11 @@ function EngagementForm() {
   const handlemusicchange = (val) => {
     setmusicvalue(val);
   };
-
+  const optionsmusic = [
+    
+    { label: "Indian", value: "Indian" },
+    { label: "Western", value: "Western" },
+  ];
   //music options end
 
   //photography option start
@@ -51,32 +56,6 @@ function EngagementForm() {
    ]
 
   //invitation ends
-
-  //Beauty start 
-   const [checkedBeauty, setCheckedBeauty] =useState("");
-   const handleBeauty = (val)=>{
-    setCheckedBeauty(val)
-   };
-   const beautyoptions = [
-    { label: "Bride", value: "Bride" },
-    { label: "Groom", value: "Groom" },
-    { label: "Family", value: "Family" },
-   ]
-
-  // Beauty ends
-
-  // Mehandi starts
-  const [checkedMehandi, setCheckedMehandi] =useState("");
-  const handleMehandi = (val)=>{
-   setCheckedMehandi(val)
-  };
-  const mehandioptions = [
-   { label: "Bride", value: "Bride" },
-   { label: "Groom", value: "Groom" },
-   { label: "Family", value: "Family" },
-  ]
-  //mehandi ends
-
   //decoration start
 
   const [decorationvalue, setdecorationvalue] = useState("");
@@ -92,7 +71,6 @@ function EngagementForm() {
     { label: "Indoor Decoration", value: "Indoor Decoration" },
     { label: "Outdoor Decoration", value: "Outdoor Decoration" },
     { label: "Lightning Decoration", value: "Lightning Decoration" },
-    { label: "Real Flower Decoration", value: "Real Flower Decoration" },
   ];
 
   //decoration ends
@@ -117,7 +95,7 @@ function EngagementForm() {
   ];
 
   //catering ends
-  
+
   const [checkedMusic, setCheckedMusic] = useState(false);
   const [checkedDance, setCheckedDance] = useState(false);
   const [checkedVenue, setCheckedVenue] = useState(false);
@@ -328,7 +306,7 @@ function EngagementForm() {
                           />
                           <label for="floatingInput">
                             {" "}
-                             person name
+                         person name
                           </label>
                         </div>
                       </div>
@@ -349,7 +327,7 @@ function EngagementForm() {
                       <div class="col-md-6 mb-4">
                         <div class="form-floating mb-3">
                           <input
-                            type="time"
+                            type="date"
                             class="form-control"
                             id="floatingInput"
                             placeholder="From"
@@ -360,7 +338,7 @@ function EngagementForm() {
                       <div class="col-md-6 mb-4">
                         <div class="form-floating mb-3">
                           <input
-                            type="time"
+                            type="date"
                             class="form-control"
                             id="floatingInput"
                             placeholder="To"
@@ -380,7 +358,7 @@ function EngagementForm() {
                       <label for="floatingInput">City</label>
                     </div>
 
-                    <div class="btn-group mb-4">
+                    {/* <div class="btn-group mb-4">
                       <input
                         type="radio"
                         class="btn-check"
@@ -390,7 +368,7 @@ function EngagementForm() {
                         disabled
                       />
                       <label class="btn btn-warning" for="option1">
-                        Gender
+                        Person
                       </label>
                       <input
                         type="radio"
@@ -400,7 +378,7 @@ function EngagementForm() {
                         autocomplete="off"
                       />
                       <label class="btn btn-primary" for="option11">
-                        Male
+                        Groom
                       </label>
                       <input
                         type="radio"
@@ -410,10 +388,10 @@ function EngagementForm() {
                         autocomplete="off"
                       />
                       <label class="btn btn-primary" for="option2">
-                        Female
+                        Bride
                       </label>
 
-                      <input
+                      {/* <input
                         type="radio"
                         class="btn-check"
                         name="options"
@@ -422,9 +400,9 @@ function EngagementForm() {
                       />
                       <label class="btn btn-primary" for="option3">
                         Others
-                      </label>
-                    </div>
-                    <div class="row">
+                      </label> */}
+                    {/* </div>  */}
+                    {/* <div class="row">
                       <div class="col-md-6 mb-4">
                         <div class="form-floating mb-3">
                           <input
@@ -448,6 +426,30 @@ function EngagementForm() {
                         </div>
                       </div>
                     </div>
+                    <div class="row">
+                      <div class="col-md-6 mb-4">
+                        <div class="form-floating mb-3">
+                          <input
+                            type="date"
+                            class="form-control"
+                            id="floatingInput"
+                            placeholder="To"
+                          />
+                          <label for="floatingInput">Bachelors Party Date</label>
+                        </div>
+                      </div>
+                      <div class="col-md-6 mb-4">
+                        <div class="form-floating mb-3">
+                          <input
+                            type="date"
+                            class="form-control"
+                            id="floatingInput"
+                            placeholder="To"
+                          />
+                          <label for="floatingInput">Shooting Date</label>
+                        </div>
+                      </div>
+                    </div> */}
                     <div class="row"></div>
 
                     <div class="d-flex justify-content-end pt-3">
@@ -467,54 +469,71 @@ function EngagementForm() {
         <div class="card">
           <form>
             <div class="card-header py-4 px-5 bg-light border-0">
-              <h4 class="mb-0 fw-bold">Engagement Event Booking</h4>
+              <h4 class="mb-0 fw-bold">Post Wedding Booking</h4>
             </div>
 
             <div class="card-body px-5">
               <div class="row gx-xl-5">
                 <div class="col-md-3">
-                  <h4><strong>Shows :</strong></h4>
+                  <h4><strong>Muh dikhai :</strong></h4>
                 </div>
 
                 <div class="col-md-9">
                   <div class="row"></div>
 
                   <div class="row">
-                    {/* <div class="col-md-3">
+                    <div class="col-md-3">
                       <div class="mb-3">
                         <label
-                          for="games"
+                          for="Sangeet choregraphy"
                           class="form-check-label"
                           value=""
                           style={{ marginRight: "15px" }}
                         >
-                          Games{" "}
+                          Sangeet choregraphy{" "}
                         </label>
                         <input
                           type="checkbox"
                           class="form-check-input"
-                          id="games"
-                        />
-                      </div>
-                    </div> */}
-                    <div class="col-md-4">
-                      <div class="mb-3">
-                        <label
-                          for="Sangeetchoreography"
-                          class="form-check-label"
-                          value=""
-                          style={{ marginRight: "15px" }}
-                        >
-                          Sangeet Choreography{" "}
-                        </label>
-                        <input
-                          type="checkbox"
-                          class="form-check-input"
-                          id="Sangeetchoreography"
+                          id="Sangeet choregraphy"
                         />
                       </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-3">
+                      <div class="mb-3">
+                        <label
+                          for="Catering"
+                          class="form-check-label"
+                          value=""
+                          style={{ marginRight: "15px" }}
+                        >
+                          Catering{" "}
+                        </label>
+                        <input
+                          type="checkbox"
+                          class="form-check-input"
+                          id="Catering"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="mb-3">
+                        <label
+                          for="venue"
+                          class="form-check-label"
+                          value=""
+                          style={{ marginRight: "15px" }}
+                        >
+                          Venue{" "}
+                        </label>
+                        <input
+                          type="checkbox"
+                          class="form-check-input"
+                          id="venue"
+                        />
+                      </div>
+                    </div>
+                    {/* <div class="col-md-3">
                       <div class="mb-3">
                         <label
                           for="music"
@@ -534,8 +553,8 @@ function EngagementForm() {
                           }}
                         />
                       </div>
-                    </div>
-                    <div class="col-md-4">
+                    </div> */}
+                    <div class="col-md-3">
                       <div class="mb-3">
                         <label
                           for="dance"
@@ -557,7 +576,7 @@ function EngagementForm() {
                       </div>
                     </div>
                   </div>
-                  {checkedMusic && (
+                  {/* {checkedMusic && (
                     <div class="row">
                       <div class="mb-3">
                         <div className="preview-values">
@@ -569,11 +588,11 @@ function EngagementForm() {
 
                         <MultiSelect
                           onChange={handlemusicchange}
-                          options={options}
+                          options={optionsmusic}
                         />
-                      </div>
+                      </div> */}
 
-                      <div class="col-md-3">
+                      {/* <div class="col-md-3">
                         <div class="mb-3">
                           <label
                             for="dj"
@@ -589,9 +608,9 @@ function EngagementForm() {
                             id="dj"
                           />
                         </div>
-                      </div>
-                    </div>
-                  )}
+                      </div> */}
+                    {/* </div>
+                  )} */}
 
                   {checkedDance && (
                     <div>
@@ -615,12 +634,12 @@ function EngagementForm() {
 
               {/* Decoration section */}
 
-              <div class="row gx-xl-5">
+              {/* <div class="row gx-xl-5">
                 <div class="col-md-3">
-                  <h4><strong>Decorations :</strong></h4>
-                </div>
+                  <h4><strong>Shooting :</strong></h4>
+                </div> */}
 
-                <div class="col-md-9">
+                {/* <div class="col-md-9">
                   <div class="row">
                     <div class="col-md-6">
                       <div class="mb-3">
@@ -667,13 +686,13 @@ function EngagementForm() {
                           }}
                         />
                       </div>
-                    </div>
-
+                    </div> */}
+{/* 
                     {checkedRegulardecoration && (
                       <div class="col-md-6">
                         <div class="mb-3">
                           <div className="preview-values">
-                            {/* <h5><strong>Decoration</strong></h5> */}
+                            <h5><strong>Decoration</strong></h5>
                             {decorationvalue}
                           </div>
 
@@ -683,8 +702,8 @@ function EngagementForm() {
                           />
                         </div>
                       </div>
-                    )}
-                    {checkedDecoration && (
+                    )} */}
+                    {/* {checkedDecoration && (
                       <div class="col-md-6">
                         <div class="mb-3">
                           <label for="exampleInput5" class="form-label"></label>
@@ -694,31 +713,28 @@ function EngagementForm() {
                             aria-label="Default select example"
                           >
                             <option selected value="1">
-                              Romantic Decoration
+                              Ballon Decoration
                             </option>
-                            <option value="2">Musical Decoration</option>
-                            <option value="3">Retro Decoration</option>
-                            <option value="4">Single Color Decoration</option>
-                            <option value="5">Multi Color Decoration</option>
-                            <option value="6">Traditional decoration</option>
-                            
+                            <option value="2">Candy Decoration</option>
+                            <option value="3">Cartoon Decoration</option>
+                            <option value="4">Jungle Party Decoration</option>
                           </select>
                         </div>
                       </div>
-                    )}
-                  </div>
+                    )} */}
+                  {/* </div>
                 </div>
-              </div>
+              </div> */}
 
               {/* Decoration section end  */}
 
-              <hr class="my-5" />
+              {/* <hr class="my-5" /> */}
 
               {/* catering start */}
 
               <div class="row gx-xl-5">
                 <div class="col-md-3">
-                  <h4><strong>Catering :</strong></h4>
+                  <h4><strong>Honney Moon :</strong></h4>
                 </div>
 
                 <div class="col-md-9">
@@ -807,29 +823,76 @@ function EngagementForm() {
 
               <div class="row gx-xl-5">
                 <div class="col-md-3">
-                  <h4><strong>Other Services :</strong></h4>
+                  <h4><strong>Subaarambh Yatra :</strong></h4>
                 </div>
 
                 <div class="col-md-9">
                   <div class="row">
-                    <div class="col-md-3">
+                  <div class="col-md-3">
                       <div class="mb-3">
                         <label
-                          for="invitation"
+                          for="decoratedcar"
                           class="form-check-label"
                           value=""
                           style={{ marginRight: "15px" }}
                         >
-                          Invitation{" "}
+                          Decorated Car{" "}
                         </label>
                         <input
                           type="checkbox"
                           class="form-check-input"
-                          id="invitation"
-                          checked={checkedInvitation}
-                          onChange={() => {
-                            setCheckedInvitation(!checkedInvitation);
-                          }}
+                          id="decoratedcar"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="mb-3">
+                        <label
+                          for="decoratedcart"
+                          class="form-check-label"
+                          value=""
+                          style={{ marginRight: "15px" }}
+                        >
+                          Decorated Cart{" "}
+                        </label>
+                        <input
+                          type="checkbox"
+                          class="form-check-input"
+                          id="decoratedcart"
+                        />
+                      </div>
+                    </div>
+                    {/* <div class="col-md-3">
+                      <div class="mb-3">
+                        <label
+                          for="indoor"
+                          class="form-check-label"
+                          value=""
+                          style={{ marginRight: "15px" }}
+                        >
+                          Indoor{" "}
+                        </label>
+                        <input
+                          type="checkbox"
+                          class="form-check-input"
+                          id="indoor"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="mb-3">
+                        <label
+                          for="outdoor"
+                          class="form-check-label"
+                          value=""
+                          style={{ marginRight: "15px" }}
+                        >
+                          Outdoor{" "}
+                        </label>
+                        <input
+                          type="checkbox"
+                          class="form-check-input"
+                          id="outdoor"
                         />
                       </div>
                     </div>
@@ -841,7 +904,7 @@ function EngagementForm() {
                           value=""
                           style={{ marginRight: "15px" }}
                         >
-                          Pooja Pandit Ji{" "}
+                          Beauty{" "}
                         </label>
                         <input
                           type="checkbox"
@@ -850,7 +913,59 @@ function EngagementForm() {
                         />
                       </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-4">
+                      <div class="mb-3">
+                        <label
+                          for="food"
+                          class="form-check-label"
+                          value=""
+                          style={{ marginRight: "15px" }}
+                        >
+                         Food arrangement during shooting{" "}
+                        </label>
+                        <input
+                          type="checkbox"
+                          class="form-check-input"
+                          id="food"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="mb-3">
+                        <label
+                          for="transport"
+                          class="form-check-label"
+                          value=""
+                          style={{ marginRight: "15px" }}
+                        >
+                          Transport during shooting{" "}
+                        </label>
+                        <input
+                          type="checkbox"
+                          class="form-check-input"
+                          id="transport"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="mb-3">
+                        <label
+                          for="accomodation"
+                          class="form-check-label"
+                          value=""
+                          style={{ marginRight: "15px" }}
+                        >
+                    Accomodation during shooting{" "}
+                        </label>
+                        <input
+                          type="checkbox"
+                          class="form-check-input"
+                          id="accomodation"
+                        />
+                      </div>
+                    </div> */}
+                    
+                    {/* <div class="col-md-3">
                       <div class="mb-3">
                         <label
                           for="venue"
@@ -870,8 +985,8 @@ function EngagementForm() {
                           }}
                         />
                       </div>
-                    </div>
-                    <div class="col-md-3">
+                    </div> */}
+                    {/* <div class="col-md-3">
                       <div class="mb-3">
                         <label
                           for="photography"
@@ -891,13 +1006,242 @@ function EngagementForm() {
                           }}
                         />
                       </div>
+                    </div> */}
+                  </div>
+
+                  {/* venue options start */}
+                 {/* { checkedInvitation && (
+                  
+                  <div>
+                  
+                     
+                      <div class="col-md-6">
+                          <div class="mb-3">
+                            <label for="exampleInput1" class="form-label">
+                              <strong>Destination Places</strong>
+                            </label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="exampleInput1"
+                              style={{ maxWidth: "500px" }}
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    
+                 )} */}
+                  <br></br>
+                  {/* {checkedVenue && (
+                    <div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="mb-3">
+                            <label for="exampleInput1" class="form-label">
+                              <strong>Venue 1 Name</strong>{" "}
+                            </label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="exampleInput1"
+                              style={{ maxWidth: "500px" }}
+                            />
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="mb-3">
+                            <label for="exampleInput1" class="form-label">
+                              <strong>Venue 1 place</strong>
+                            </label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="exampleInput1"
+                              style={{ maxWidth: "500px" }}
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="mb-3">
+                            <label for="exampleInput1" class="form-label">
+                              <strong>Venue 2 Name</strong>
+                            </label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="exampleInput1"
+                              style={{ maxWidth: "500px" }}
+                            />
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="mb-3">
+                            <label for="exampleInput1" class="form-label">
+                              <strong>Venue 2 place</strong>
+                            </label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="exampleInput1"
+                              style={{ maxWidth: "500px" }}
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="mb-3">
+                            <label for="exampleInput1" class="form-label">
+                              <strong>Venue 3 Name</strong>
+                            </label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="exampleInput1"
+                              style={{ maxWidth: "500px" }}
+                            />
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="mb-3">
+                            <label for="exampleInput1" class="form-label">
+                              <strong>Venue 3 place</strong>
+                            </label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="exampleInput1"
+                              style={{ maxWidth: "500px" }}
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )} */}
+
+                  {/* venue option end */}
+                  {/* { checkedPhotography && (
+                  <div>
+                    <div className="preview-values">
+                      <h5>
+                        <strong>Photography</strong>
+                      </h5>
+                      {photovalue}
+                    </div>
+
+                    <MultiSelect
+                      onChange={handlePhotoChange}
+                      options={PhotoOptions}
+                    />
+                  </div>
+                  )} */}
+                </div>
+                  
+              </div>
+              <hr class="my-5" />
+
+              {/* other events start */}
+
+              <div class="row gx-xl-5">
+                <div class="col-md-3">
+                  <h4><strong>Honney Moon :</strong></h4>
+                </div>
+
+                <div class="col-md-9">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <div class="mb-3">
+                        <label
+                          for="invitation"
+                          class="form-check-label"
+                          value=""
+                          style={{ marginRight: "15px" }}
+                        >
+                          Destination{" "}
+                        </label>
+                        <input
+                          type="checkbox"
+                          class="form-check-input"
+                          id="invitation"
+                          checked={checkedInvitation}
+                          onChange={() => {
+                            setCheckedInvitation(!checkedInvitation);
+                          }}
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                          <div class="mb-3">
+                            <label for="exampleInput1" class="form-label">
+                            <h5><strong>Number of days Stay</strong></h5>
+                            </label>
+                            <input
+                              type="number"
+                              class="form-control"
+                              id="exampleInput1"
+                              style={{ maxWidth: "500px" }}
+                            />
+                          </div>
+                        </div>
+                    {/* <div class="col-md-3">
+                      <div class="mb-3">
+                        <label
+                          for="filmcity"
+                          class="form-check-label"
+                          value=""
+                          style={{ marginRight: "15px" }}
+                        >
+                          Film city{" "}
+                        </label>
+                        <input
+                          type="checkbox"
+                          class="form-check-input"
+                          id="filmcity"
+                        />
+                      </div>
                     </div>
                     <div class="col-md-3">
                       <div class="mb-3">
                         <label
-                          for="Beauty"
+                          for="indoor"
                           class="form-check-label"
-                          value=" "
+                          value=""
+                          style={{ marginRight: "15px" }}
+                        >
+                          Indoor{" "}
+                        </label>
+                        <input
+                          type="checkbox"
+                          class="form-check-input"
+                          id="indoor"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="mb-3">
+                        <label
+                          for="outdoor"
+                          class="form-check-label"
+                          value=""
+                          style={{ marginRight: "15px" }}
+                        >
+                          Outdoor{" "}
+                        </label>
+                        <input
+                          type="checkbox"
+                          class="form-check-input"
+                          id="outdoor"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="mb-3">
+                        <label
+                          for="beauty"
+                          class="form-check-label"
+                          value=""
                           style={{ marginRight: "15px" }}
                         >
                           Beauty{" "}
@@ -905,59 +1249,112 @@ function EngagementForm() {
                         <input
                           type="checkbox"
                           class="form-check-input"
-                          id="Beauty"
-                          checked={checkedBeauty}
-                          onChange={() => {
-                            setCheckedBeauty(!checkedBeauty);
-                          }}
+                          id="beauty"
                         />
                       </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-4">
                       <div class="mb-3">
                         <label
-                          for="Mehandi"
-                          class="form-check-label"
-                          value=" "
-                          style={{ marginRight: "15px" }}
-                        >
-                          Mehandi{" "}
-                        </label>
-                        <input
-                          type="checkbox"
-                          class="form-check-input"
-                          id="Mehandi"
-                          checked={checkedMehandi}
-                          onChange={() => {
-                            setCheckedMehandi(!checkedMehandi);
-                          }}
-                        />
-                      </div>
-                    </div>
-                    <div class="col-md-3">
-                      <div class="mb-3">
-                        <label
-                          for="hosting"
+                          for="food"
                           class="form-check-label"
                           value=""
                           style={{ marginRight: "15px" }}
                         >
-                          Hosting{" "}
+                         Food arrangement during shooting{" "}
                         </label>
                         <input
                           type="checkbox"
                           class="form-check-input"
-                          id="hosting"
+                          id="food"
                         />
                       </div>
                     </div>
+                    <div class="col-md-4">
+                      <div class="mb-3">
+                        <label
+                          for="transport"
+                          class="form-check-label"
+                          value=""
+                          style={{ marginRight: "15px" }}
+                        >
+                          Transport during shooting{" "}
+                        </label>
+                        <input
+                          type="checkbox"
+                          class="form-check-input"
+                          id="transport"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="mb-3">
+                        <label
+                          for="accomodation"
+                          class="form-check-label"
+                          value=""
+                          style={{ marginRight: "15px" }}
+                        >
+                    Accomodation during shooting{" "}
+                        </label>
+                        <input
+                          type="checkbox"
+                          class="form-check-input"
+                          id="accomodation"
+                        />
+                      </div>
+                    </div>
+                     */}
+                    {/* <div class="col-md-3">
+                      <div class="mb-3">
+                        <label
+                          for="venue"
+                          class="form-check-label"
+                          value=" "
+                          style={{ marginRight: "15px" }}
+                        >
+                          Venue{" "}
+                        </label>
+                        <input
+                          type="checkbox"
+                          class="form-check-input"
+                          id="venue"
+                          checked={checkedVenue}
+                          onChange={() => {
+                            setCheckedVenue(!checkedVenue);
+                          }}
+                        />
+                      </div>
+                    </div> */}
+                    {/* <div class="col-md-3">
+                      <div class="mb-3">
+                        <label
+                          for="photography"
+                          class="form-check-label"
+                          value=" "
+                          style={{ marginRight: "15px" }}
+                        >
+                          Photography{" "}
+                        </label>
+                        <input
+                          type="checkbox"
+                          class="form-check-input"
+                          id="photography"
+                          checked={checkedPhotography}
+                          onChange={() => {
+                            setCheckedPhotography(!checkedPhotography);
+                          }}
+                        />
+                      </div>
+                    </div> */}
                   </div>
 
                   {/* venue options start */}
                  { checkedInvitation && (
                   
                   <div>
-                      <div className="preview-values">
+                  
+                      {/* <div className="preview-values">
                         <h5>
                           <strong>Invitation</strong>{" "}
                         </h5>
@@ -967,10 +1364,37 @@ function EngagementForm() {
                       <MultiSelect
                         onChange={handleinvitation}
                         options={invitationtypes}
-                      />
-                    </div>
+                      /> */}
+                      <div class="col-md-6">
+                          <div class="mb-3">
+                            <label for="india" class="form-label">
+                              <h5><strong>India</strong></h5>
+                            </label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="india"
+                              style={{ maxWidth: "500px" }}
+                            />
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="mb-3">
+                            <label for="abroad" class="form-label">
+                            <h5><strong>Abroad</strong></h5>
+                            </label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="abroad"
+                              style={{ maxWidth: "500px" }}
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    
                  )}
-                  <br></br>
+                  {/* <br></br>
                   {checkedVenue && (
                     <div>
                       <div class="row">
@@ -1058,7 +1482,7 @@ function EngagementForm() {
                         </div>
                       </div>
                     </div>
-                  )}
+                  )} */}
 
                   {/* venue option end */}
                   { checkedPhotography && (
@@ -1067,7 +1491,7 @@ function EngagementForm() {
                       <h5>
                         <strong>Photography</strong>
                       </h5>
-                      {checkedBeauty}
+                      {photovalue}
                     </div>
 
                     <MultiSelect
@@ -1076,44 +1500,9 @@ function EngagementForm() {
                     />
                   </div>
                   )}
-                  { checkedBeauty && (
-                  <div>
-                    <div className="preview-values">
-                      <h5>
-                        <strong>Beauty</strong>
-                      </h5>
-                      {}
-                    </div>
-
-                    <MultiSelect
-                      onChange={handleBeauty}
-                      options={beautyoptions}
-                    />
-                  </div>
-                  )}
-                  { checkedMehandi && (
-                  <div>
-                    <div className="preview-values">
-                      <h5>
-                        <strong>Mehandi</strong>
-                      </h5>
-                      {}
-                    </div>
-
-                    <MultiSelect
-                      onChange={handleMehandi}
-                      options={mehandioptions}
-                    />
-                  </div>
-                  )}
-
-                  
                 </div>
-                
                   
               </div>
-    
-             
 
               {/* other events end */}
 
@@ -1210,4 +1599,4 @@ function EngagementForm() {
   );
 }
 
-export default EngagementForm;
+export default PostweddingForm;
