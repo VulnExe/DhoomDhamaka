@@ -296,6 +296,20 @@ function PreweddingForm() {
                     </h3>
 
                     <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="form-floating mb-3">
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="floatingInput"
+                            placeholder="Name"
+                          />
+                          <label for="floatingInput">
+                            {" "}
+                             Client Name
+                          </label>
+                        </div>
+                      </div>
                       <div class="col-md-6 mb-4">
                         <div class="form-floating mb-3">
                           <input
@@ -306,7 +320,21 @@ function PreweddingForm() {
                           />
                           <label for="floatingInput">
                             {" "}
-                         person name
+                             Bride Name
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-md-6 mb-4">
+                        <div class="form-floating mb-3">
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="floatingInput"
+                            placeholder="Name"
+                          />
+                          <label for="floatingInput">
+                            {" "}
+                             Groom Name
                           </label>
                         </div>
                       </div>
@@ -403,7 +431,7 @@ function PreweddingForm() {
                       </label> */}
                     </div>
                     <div class="row">
-                      <div class="col-md-6 mb-4">
+                      {/* <div class="col-md-6 mb-4">
                         <div class="form-floating mb-3">
                           <input
                             type="number"
@@ -413,8 +441,8 @@ function PreweddingForm() {
                           />
                           <label for="floatingInput">Age</label>
                         </div>
-                      </div>
-                      <div class="col-md-6 mb-4">
+                      </div> */}
+                      {/* <div class="col-md-6 mb-4">
                         <div class="form-floating mb-3">
                           <input
                             type="number"
@@ -424,7 +452,7 @@ function PreweddingForm() {
                           />
                           <label for="floatingInput">No of Guests</label>
                         </div>
-                      </div>
+                      </div> */}
                     </div>
                     <div class="row">
                       <div class="col-md-6 mb-4">
@@ -454,7 +482,7 @@ function PreweddingForm() {
 
                     <div class="d-flex justify-content-end pt-3">
                       <button type="button" class="btn btn-info btn-lg ms-2 ">
-                        Submit form
+                        Save
                       </button>
                     </div>
                   </div>
@@ -482,12 +510,12 @@ function PreweddingForm() {
                   <div class="row"></div>
 
                   <div class="row">
-                    <div class="col-md-3">
+                  <div class="col-md-4">
                       <div class="mb-3">
                         <label
-                          for="games"
+                          for="venue"
                           class="form-check-label"
-                          value=""
+                          value=" "
                           style={{ marginRight: "15px" }}
                         >
                           Venue{" "}
@@ -495,11 +523,15 @@ function PreweddingForm() {
                         <input
                           type="checkbox"
                           class="form-check-input"
-                          id="games"
+                          id="venue"
+                          checked={checkedVenue}
+                          onChange={() => {
+                            setCheckedVenue(!checkedVenue);
+                          }}
                         />
                       </div>
                     </div>
-                    <div class="col-md-3">
+                    {/* <div class="col-md-3">
                       <div class="mb-3">
                         <label
                           for="magic"
@@ -515,8 +547,8 @@ function PreweddingForm() {
                           id="magic"
                         />
                       </div>
-                    </div>
-                    <div class="col-md-3">
+                    </div> */}
+                    <div class="col-md-4">
                       <div class="mb-3">
                         <label
                           for="music"
@@ -537,7 +569,7 @@ function PreweddingForm() {
                         />
                       </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-4">
                       <div class="mb-3">
                         <label
                           for="dance"
@@ -558,6 +590,17 @@ function PreweddingForm() {
                         />
                       </div>
                     </div>
+                    <div class="col-md-4 ">
+                        <div class="form-floating mb-3">
+                          <input
+                            type="number"
+                            class="form-control"
+                            id="floatingInput"
+                            placeholder="To"
+                          />
+                          <label for="floatingInput">No of Guests</label>
+                        </div>
+                      </div>
                   </div>
                   {checkedMusic && (
                     <div class="row">
@@ -610,8 +653,184 @@ function PreweddingForm() {
                       />
                     </div>
                   )}
+                  <br></br>
+                  {checkedVenue && (
+                    <div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="mb-3">
+                            <label for="exampleInput1" class="form-label">
+                              <strong>Venue 1 Name</strong>{" "}
+                            </label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="exampleInput1"
+                              style={{ maxWidth: "500px" }}
+                            />
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="mb-3">
+                            <label for="exampleInput1" class="form-label">
+                              <strong>Venue 1 place</strong>
+                            </label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="exampleInput1"
+                              style={{ maxWidth: "500px" }}
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="mb-3">
+                            <label for="exampleInput1" class="form-label">
+                              <strong>Venue 2 Name</strong>
+                            </label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="exampleInput1"
+                              style={{ maxWidth: "500px" }}
+                            />
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="mb-3">
+                            <label for="exampleInput1" class="form-label">
+                              <strong>Venue 2 place</strong>
+                            </label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="exampleInput1"
+                              style={{ maxWidth: "500px" }}
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="mb-3">
+                            <label for="exampleInput1" class="form-label">
+                              <strong>Venue 3 Name</strong>
+                            </label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="exampleInput1"
+                              style={{ maxWidth: "500px" }}
+                            />
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="mb-3">
+                            <label for="exampleInput1" class="form-label">
+                              <strong>Venue 3 place</strong>
+                            </label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="exampleInput1"
+                              style={{ maxWidth: "500px" }}
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}  
+
                 </div>
               </div>
+              <br></br>
+              <div class="row gx-xl-5">
+                <div class="col-md-3">
+                  <h4><strong>Catering :</strong></h4>
+                </div>
+
+                <div class="col-md-9">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="mb-3">
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="flexRadioDefault"
+                            id="flexRadioDefault"
+                          />
+
+                          <label
+                            class="form-check-label"
+                            for="flexRadioDefault"
+                          >
+                            {" "}
+                            Veg{" "}
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="mb-3">
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="flexRadioDefault"
+                            id="flexRadioDefault1"
+                          />
+
+                          <label
+                            class="form-check-label"
+                            for="flexRadioDefault1"
+                          >
+                            Non-Veg{" "}
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="mb-3">
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="flexRadioDefault"
+                            id="flexRadioDefault2"
+                          />
+
+                          <label
+                            class="form-check-label"
+                            for="flexRadioDefault2"
+                          >
+                            {" "}
+                            Jain{" "}
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <div className="preview-values">
+                        <h5>
+                          <strong>Food Type</strong>{" "}
+                        </h5>
+                        {foodvalue}
+                      </div>
+
+                      <MultiSelect
+                        onChange={handlefoodchange}
+                        options={foodtypes}
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* catering ends  */}
+
 
               {/* <hr class="my-5" /> */}
 
@@ -797,6 +1016,7 @@ function PreweddingForm() {
                   </div>
                 </div>
               </div> */}
+              
 
               {/* catering ends  */}
 
@@ -1028,7 +1248,7 @@ function PreweddingForm() {
                       </div>
                     
                  )}
-                  <br></br>
+                  {/* <br></br>
                   {checkedVenue && (
                     <div>
                       <div class="row">
@@ -1116,7 +1336,7 @@ function PreweddingForm() {
                         </div>
                       </div>
                     </div>
-                  )}
+                  )} */}
 
                   {/* venue option end */}
                   { checkedPhotography && (

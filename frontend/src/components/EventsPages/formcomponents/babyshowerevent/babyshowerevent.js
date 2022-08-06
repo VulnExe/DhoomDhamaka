@@ -303,10 +303,25 @@ function BabyShowerForm() {
                           />
                           <label for="floatingInput">
                             {" "}
-                            Person name
+                            Mom Name
                           </label>
                         </div>
                       </div>
+                      <div class="col-md-6 mb-4">
+                        <div class="form-floating mb-3">
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="floatingInput"
+                            placeholder="Name"
+                          />
+                          <label for="floatingInput">
+                            {" "}
+                            Dad Name
+                          </label>
+                        </div>
+                      </div>
+                      
                       <div class="col-md-6 mb-4">
                         <div class="form-floating mb-3">
                           <input
@@ -345,7 +360,7 @@ function BabyShowerForm() {
                       </div>
                     </div>
 
-                    <div class="form-floating mb-4">
+                    {/* <div class="form-floating mb-4">
                       <input
                         type="city"
                         class="form-control"
@@ -398,9 +413,9 @@ function BabyShowerForm() {
                       <label class="btn btn-primary" for="option3">
                         Others
                       </label>
-                    </div>
+                    </div> */}
                     <div class="row">
-                      <div class="col-md-6 mb-4">
+                      {/* <div class="col-md-6 mb-4">
                         <div class="form-floating mb-3">
                           <input
                             type="number"
@@ -410,7 +425,7 @@ function BabyShowerForm() {
                           />
                           <label for="floatingInput">Age</label>
                         </div>
-                      </div>
+                      </div> */}
                       <div class="col-md-6 mb-4">
                         <div class="form-floating mb-3">
                           <input

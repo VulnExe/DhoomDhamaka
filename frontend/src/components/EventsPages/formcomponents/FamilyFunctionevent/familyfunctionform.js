@@ -318,6 +318,23 @@ function FamilyfunctionForm() {
                     </h3>
 
                     <div class="row">
+                    <div class="col-md-6 mb-4">
+                      <div class="form-floating mb-4">
+                          <label for="exampleInput5" class="form-label">Type of Function</label>
+                          <select
+                            id="exampleInput5"
+                            class="form-select mb-4"
+                            aria-label="Default select example"
+                          >
+                          <option value="0"></option>
+                            
+                            <option value="2">Festival</option>
+                            <option value="3">Non-Festival</option>
+                            
+                            
+                          </select>
+                        </div>
+                        </div>
                       <div class="col-md-6 mb-4">
                         <div class="form-floating mb-3">
                           <input
@@ -341,6 +358,17 @@ function FamilyfunctionForm() {
                             placeholder="Date"
                           />
                           <label for="floatingInput">No of days</label>
+                        </div>
+                      </div>
+                      <div class="col-md-6 mb-4">
+                        <div class="form-floating mb-3">
+                          <input
+                            type="number"
+                            class="form-control"
+                            id="floatingInput"
+                            placeholder="To"
+                          />
+                          <label for="floatingInput">No of Guests</label>
                         </div>
                       </div>
                     </div>
@@ -370,7 +398,7 @@ function FamilyfunctionForm() {
                       </div>
                     </div>
                     {/* <div class="col-md-6 mb-4"> */}
-                    <div class="form-floating mb-4">
+                    {/* <div class="form-floating mb-4">
                       <input
                         type="city"
                         class="form-control"
@@ -378,7 +406,7 @@ function FamilyfunctionForm() {
                         placeholder="address"
                       />
                       <label for="floatingInput">Name of the concern / Organisation</label>
-                    </div>
+                    </div> */}
                     
                         
                         {/* </div> */}
@@ -439,7 +467,7 @@ function FamilyfunctionForm() {
                           <label for="floatingInput">Age</label>
                         </div>
                       </div> */}
-                      <div class="col-md-6 mb-4">
+                      {/* <div class="col-md-6 mb-4">
                       <div class="form-floating mb-4">
                           <label for="exampleInput5" class="form-label">Type of Function</label>
                           <select
@@ -455,25 +483,15 @@ function FamilyfunctionForm() {
                             
                           </select>
                         </div>
-                        </div>
+                        </div> */}
                       
-                      <div class="col-md-6 mb-4">
-                        <div class="form-floating mb-3">
-                          <input
-                            type="number"
-                            class="form-control"
-                            id="floatingInput"
-                            placeholder="To"
-                          />
-                          <label for="floatingInput">No of Guests</label>
-                        </div>
-                      </div>
+                       
                     </div>
                     <div class="row"></div>
 
                     <div class="d-flex justify-content-end pt-3">
                       <button type="button" class="btn btn-info btn-lg ms-2 ">
-                        Submit form
+                        Save
                       </button>
                     </div>
                   </div>

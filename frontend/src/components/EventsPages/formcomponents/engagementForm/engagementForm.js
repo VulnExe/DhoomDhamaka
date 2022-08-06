@@ -328,7 +328,35 @@ function EngagementForm() {
                           />
                           <label for="floatingInput">
                             {" "}
-                             person name
+                             Client Name
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-md-6 mb-4">
+                        <div class="form-floating mb-3">
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="floatingInput"
+                            placeholder="Name"
+                          />
+                          <label for="floatingInput">
+                            {" "}
+                             Bride Name
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-md-6 mb-4">
+                        <div class="form-floating mb-3">
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="floatingInput"
+                            placeholder="Name"
+                          />
+                          <label for="floatingInput">
+                            {" "}
+                             Groom Name
                           </label>
                         </div>
                       </div>
@@ -380,7 +408,7 @@ function EngagementForm() {
                       <label for="floatingInput">City</label>
                     </div>
 
-                    <div class="btn-group mb-4">
+                    {/* <div class="btn-group mb-4">
                       <input
                         type="radio"
                         class="btn-check"
@@ -423,9 +451,9 @@ function EngagementForm() {
                       <label class="btn btn-primary" for="option3">
                         Others
                       </label>
-                    </div>
+                    </div> */}
                     <div class="row">
-                      <div class="col-md-6 mb-4">
+                      {/* <div class="col-md-6 mb-4">
                         <div class="form-floating mb-3">
                           <input
                             type="number"
@@ -435,7 +463,7 @@ function EngagementForm() {
                           />
                           <label for="floatingInput">Age</label>
                         </div>
-                      </div>
+                      </div> */}
                       <div class="col-md-6 mb-4">
                         <div class="form-floating mb-3">
                           <input
@@ -452,7 +480,7 @@ function EngagementForm() {
 
                     <div class="d-flex justify-content-end pt-3">
                       <button type="button" class="btn btn-info btn-lg ms-2 ">
-                        Submit form
+                       Save
                       </button>
                     </div>
                   </div>

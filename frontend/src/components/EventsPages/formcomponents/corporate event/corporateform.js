@@ -129,7 +129,7 @@ function CorporateForm() {
   const [checkedRegulardecoration, setcheckedRegulardecoration] = useState(false);
   const [checkedInvitation, setCheckedInvitation] = useState(false)
   const [checkedPhotography, setCheckedPhotography] = useState(false)
-  const [checkedPlay, setCheckedPlay] = useState("false");
+  const [checkedPlay, setCheckedPlay] = useState(false);
 
   return (
     <section class="h-50">
@@ -323,6 +323,25 @@ function CorporateForm() {
                     </h3>
 
                     <div class="row">
+                    <div class="col-md-6 mb-4">
+                      <div class="form-floating mb-4">
+                          <label for="exampleInput5" class="form-label">Type of event</label>
+                          <select
+                            id="exampleInput5"
+                            class="form-select mb-4"
+                            aria-label="Default select example"
+                          >
+                          <option value="0"></option>
+                            <option  value="1">
+                              School
+                            </option>
+                            <option value="2">College</option>
+                            <option value="3">corporate</option>
+                            
+                            
+                          </select>
+                        </div>
+                        </div>
                       <div class="col-md-6 mb-4">
                         <div class="form-floating mb-3">
                           <input
@@ -337,6 +356,16 @@ function CorporateForm() {
                           </label>
                         </div>
                       </div>
+                      <div class="form-floating mb-4">
+                      <input
+                        type="city"
+                        class="form-control"
+                        id="floatingInput"
+                        placeholder="address"
+                      />
+                      <label for="floatingInput">Name of the concern / Organisation</label>
+                    </div>
+                      
                       <div class="col-md-6 mb-4">
                         <div class="form-floating mb-3">
                           <input
@@ -346,6 +375,17 @@ function CorporateForm() {
                             placeholder="Date"
                           />
                           <label for="floatingInput">Date</label>
+                        </div>
+                      </div>
+                      <div class="col-md-6 mb-4">
+                        <div class="form-floating mb-3">
+                          <input
+                            type="number"
+                            class="form-control"
+                            id="floatingInput"
+                            placeholder="To"
+                          />
+                          <label for="floatingInput">No of Guests</label>
                         </div>
                       </div>
                     </div>
@@ -375,15 +415,7 @@ function CorporateForm() {
                       </div>
                     </div>
                     {/* <div class="col-md-6 mb-4"> */}
-                    <div class="form-floating mb-4">
-                      <input
-                        type="city"
-                        class="form-control"
-                        id="floatingInput"
-                        placeholder="address"
-                      />
-                      <label for="floatingInput">Name of the concern / Organisation</label>
-                    </div>
+                    
                     
                         
                         {/* </div> */}
@@ -444,43 +476,15 @@ function CorporateForm() {
                           <label for="floatingInput">Age</label>
                         </div>
                       </div> */}
-                      <div class="col-md-6 mb-4">
-                      <div class="form-floating mb-4">
-                          <label for="exampleInput5" class="form-label">Type of event</label>
-                          <select
-                            id="exampleInput5"
-                            class="form-select mb-4"
-                            aria-label="Default select example"
-                          >
-                          <option value="0"></option>
-                            <option  value="1">
-                              School
-                            </option>
-                            <option value="2">College</option>
-                            <option value="3">corporate</option>
-                            
-                            
-                          </select>
-                        </div>
-                        </div>
+                     
                       
-                      <div class="col-md-6 mb-4">
-                        <div class="form-floating mb-3">
-                          <input
-                            type="number"
-                            class="form-control"
-                            id="floatingInput"
-                            placeholder="To"
-                          />
-                          <label for="floatingInput">No of Guests</label>
-                        </div>
-                      </div>
+                      
                     </div>
                     <div class="row"></div>
 
                     <div class="d-flex justify-content-end pt-3">
                       <button type="button" class="btn btn-info btn-lg ms-2 ">
-                        Submit form
+                        Save
                       </button>
                     </div>
                   </div>

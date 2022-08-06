@@ -129,6 +129,32 @@ function Weddingform() {
   
     //decoration ends
   
+    const [Themeweddingvalue, setThemeweddingvalue] = useState("");
+    const handleOnchangeThemewedding = (val) => {
+      setThemeweddingvalue(val);
+    };
+    const Themeweddingoptions = [
+      { label: "Royal Wedding", value: "Royal Wedding" },
+      { label: "Fairy Tale Wedding", value: "Fairy Tale Wedding" },
+      { label: " Green/Forest Wedding", value: " Green/Forest Wedding" },
+      { label: " Beach  Wedding", value: " Beach  Wedding" },
+      { label: " Real Flowers Wedding", value: " Real Flowers Wedding" },
+      { label: "Artificial Flowers  Wedding", value: "Artificial Flowers  Wedding" },
+      { label: "Indoor Wedding ", value: " Indoor Wedding" },
+      { label: "  Outdoor Wedding", value: " Outdoor Wedding " },
+      { label: " Seasonal Wedding", value: "Seasonal Wedding " },
+      { label: "  Retro Wedding", value: " Retro Wedding " },
+      { label: " Romantic Wedding", value: " Romantic Wedding" },
+      { label: "Single Colour theme Wedding ", value: "Single Colour theme Wedding " },
+      { label: "Multi Colour theme Wedding ", value: "Multi Colour theme Wedding " },
+      { label: "Historical  Wedding ", value: "Historical  Wedding " },
+      { label: "Dessert style Wedding ", value: " Dessert style Wedding" },
+      { label: " Musical theme Wedding", value: " Musical theme Wedding" },
+      { label: " Cultural Wedding", value: "Cultural Wedding " },
+      
+    ]
+
+
     //Catering start
     const [foodvalue, setfoodvalue] = useState("");
     const handlefoodchange = (val) => {
@@ -150,6 +176,15 @@ function Weddingform() {
   
     //catering ends
     const [checkedHaldi, setCheckedHaldi] = useState(false);
+    const [checkedMehandishow, setCheckedMehandishow] = useState(false);
+    const [checkedSangeet, setCheckedSangeet] = useState(false);
+    const [checkedPooja, setCheckedPooja] = useState(false);
+    const [checkedReception, setCheckedReception] = useState(false);
+    const [checkedPhera, setCheckedPhera] = useState(false);
+    const [checkedBaraat, setCheckedBaraat] = useState(false);
+    const [checkedTilak, setCheckedTilak] = useState(false);
+
+
     const [checkedMusic, setCheckedMusic] = useState(false);
     const [checkedDance, setCheckedDance] = useState(false);
     const [checkedVenue, setCheckedVenue] = useState(false);
@@ -353,20 +388,48 @@ function Weddingform() {
                   </h3>
 
                   <div class="row">
-                    <div class="col-md-6 mb-4">
-                      <div class="form-floating mb-3">
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="floatingInput"
-                          placeholder="Name"
-                        />
-                        <label for="floatingInput">
-                          {" "}
-                           person name
-                        </label>
+                  <div class="col-md-6 mb-4">
+                        <div class="form-floating mb-3">
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="floatingInput"
+                            placeholder="Name"
+                          />
+                          <label for="floatingInput">
+                            {" "}
+                             Client Name
+                          </label>
+                        </div>
                       </div>
-                    </div>
+                      <div class="col-md-6 mb-4">
+                        <div class="form-floating mb-3">
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="floatingInput"
+                            placeholder="Name"
+                          />
+                          <label for="floatingInput">
+                            {" "}
+                             Bride Name
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-md-6 mb-4">
+                        <div class="form-floating mb-3">
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="floatingInput"
+                            placeholder="Name"
+                          />
+                          <label for="floatingInput">
+                            {" "}
+                             Groom Name
+                          </label>
+                        </div>
+                      </div>
                     <div class="col-md-6 mb-4">
                       <div class="form-floating mb-3">
                         <input
@@ -384,7 +447,7 @@ function Weddingform() {
                     <div class="col-md-6 mb-4">
                       <div class="form-floating mb-3">
                         <input
-                          type="time"
+                          type="date"
                           class="form-control"
                           id="floatingInput"
                           placeholder="From"
@@ -395,7 +458,7 @@ function Weddingform() {
                     <div class="col-md-6 mb-4">
                       <div class="form-floating mb-3">
                         <input
-                          type="time"
+                          type="date"
                           class="form-control"
                           id="floatingInput"
                           placeholder="To"
@@ -415,7 +478,7 @@ function Weddingform() {
                     <label for="floatingInput">City</label>
                   </div>
 
-                  <div class="btn-group mb-4">
+                  {/* <div class="btn-group mb-4">
                     <input
                       type="radio"
                       class="btn-check"
@@ -458,9 +521,9 @@ function Weddingform() {
                     <label class="btn btn-primary" for="option3">
                       Others
                     </label>
-                  </div>
+                  </div> */}
                   <div class="row">
-                    <div class="col-md-6 mb-4">
+                    {/* <div class="col-md-6 mb-4">
                       <div class="form-floating mb-3">
                         <input
                           type="number"
@@ -470,7 +533,7 @@ function Weddingform() {
                         />
                         <label for="floatingInput">Age</label>
                       </div>
-                    </div>
+                    </div> */}
                     <div class="col-md-6 mb-4">
                       <div class="form-floating mb-3">
                         <input
@@ -487,7 +550,7 @@ function Weddingform() {
 
                   <div class="d-flex justify-content-end pt-3">
                     <button type="button" class="btn btn-info btn-lg ms-2 ">
-                      Submit form
+                      Save
                     </button>
                   </div>
                 </div>
@@ -530,6 +593,10 @@ function Weddingform() {
                           type="checkbox"
                           class="form-check-input"
                           id="Mehandi"
+                          checked={checkedMehandishow}
+                          onChange={() => {
+                            setCheckedMehandishow(!checkedMehandishow);
+                          }}
                         />
                       </div>
                     </div>
@@ -547,6 +614,10 @@ function Weddingform() {
                           type="checkbox"
                           class="form-check-input"
                           id="Sangeet"
+                          checked={checkedSangeet}
+                          onChange={() => {
+                            setCheckedSangeet(!checkedSangeet);
+                          }}
                         />
                       </div>
                     </div>
@@ -564,6 +635,10 @@ function Weddingform() {
                           type="checkbox"
                           class="form-check-input"
                           id="Pooja"
+                          checked={checkedPooja}
+                          onChange={() => {
+                            setCheckedPooja(!checkedPooja);
+                          }}
                         />
                       </div>
                     </div>
@@ -581,6 +656,10 @@ function Weddingform() {
                           type="checkbox"
                           class="form-check-input"
                           id="Baraat"
+                          checked={checkedBaraat}
+                          onChange={() => {
+                            setCheckedBaraat(!checkedBaraat);
+                          }}
                         />
                       </div>
                     </div>
@@ -598,6 +677,10 @@ function Weddingform() {
                           type="checkbox"
                           class="form-check-input"
                           id="Reception"
+                          checked={checkedReception}
+                          onChange={() => {
+                            setCheckedReception(!checkedReception);
+                          }}
                         />
                       </div>
                     </div>
@@ -615,6 +698,10 @@ function Weddingform() {
                           type="checkbox"
                           class="form-check-input"
                           id="Phera"
+                          checked={checkedPhera}
+                          onChange={() => {
+                            setCheckedPhera(!checkedPhera);
+                          }}
                         />
                       </div>
                     </div>
@@ -632,6 +719,10 @@ function Weddingform() {
                           type="checkbox"
                           class="form-check-input"
                           id="Tilak"
+                          checked={checkedTilak}
+                          onChange={() => {
+                            setCheckedTilak(!checkedTilak);
+                          }}
                         />
                       </div>
                     </div>
@@ -662,7 +753,7 @@ function Weddingform() {
                     <div class="col-md-6">
                           <div class="mb-3">
                             <label for="datehaldi" class="form-label">
-                              <strong>Date</strong>{" "}
+                              <strong>Date for Haldi</strong>{" "}
                             </label>
                             <input
                               type="date"
@@ -676,12 +767,229 @@ function Weddingform() {
                         <div class="col-md-6">
                           <div class="mb-3">
                             <label for="timehaldi" class="form-label">
-                              <strong>Time</strong>{" "}
+                              <strong>Time for Haldi</strong>{" "}
                             </label>
                             <input
                               type="time"
                               class="form-control"
                               id="timehaldi"
+                              style={{ maxWidth: "500px" }}
+                            />
+                          </div>
+                        </div>
+                    </div>
+                  )}
+                  {checkedMehandishow && (
+                    <div class="row">
+                    <div class="col-md-6">
+                          <div class="mb-3">
+                            <label for="dateMehandishow" class="form-label">
+                              <strong>Date for Mehandi</strong>{" "}
+                            </label>
+                            <input
+                              type="date"
+                              class="form-control"
+                              id="dateMehandishow"
+                              style={{ maxWidth: "500px" }}
+                            />
+                          </div>
+                        </div>
+
+                        <div class="col-md-6">
+                          <div class="mb-3">
+                            <label for="timeMehandishow" class="form-label">
+                              <strong>Time for Mehandi</strong>{" "}
+                            </label>
+                            <input
+                              type="time"
+                              class="form-control"
+                              id="timeMehandishow"
+                              style={{ maxWidth: "500px" }}
+                            />
+                          </div>
+                        </div>
+                    </div>
+                  )}
+                  {checkedSangeet && (
+                    <div class="row">
+                    <div class="col-md-6">
+                          <div class="mb-3">
+                            <label for="dateSangeet" class="form-label">
+                              <strong>Date for Sangeet</strong>{" "}
+                            </label>
+                            <input
+                              type="date"
+                              class="form-control"
+                              id="dateSangeet"
+                              style={{ maxWidth: "500px" }}
+                            />
+                          </div>
+                        </div>
+
+                        <div class="col-md-6">
+                          <div class="mb-3">
+                            <label for="timeSangeet" class="form-label">
+                              <strong>Time for Sangeet</strong>{" "}
+                            </label>
+                            <input
+                              type="time"
+                              class="form-control"
+                              id="timeSangeet"
+                              style={{ maxWidth: "500px" }}
+                            />
+                          </div>
+                        </div>
+                    </div>
+                  )}
+                  {checkedPooja && (
+                    <div class="row">
+                    <div class="col-md-6">
+                          <div class="mb-3">
+                            <label for="datePooja" class="form-label">
+                              <strong>Date for Pooja</strong>{" "}
+                            </label>
+                            <input
+                              type="date"
+                              class="form-control"
+                              id="datePooja"
+                              style={{ maxWidth: "500px" }}
+                            />
+                          </div>
+                        </div>
+
+                        <div class="col-md-6">
+                          <div class="mb-3">
+                            <label for="timePooja" class="form-label">
+                              <strong>Time for Pooja</strong>{" "}
+                            </label>
+                            <input
+                              type="time"
+                              class="form-control"
+                              id="timePooja"
+                              style={{ maxWidth: "500px" }}
+                            />
+                          </div>
+                        </div>
+                    </div>
+                  )}
+                  {checkedBaraat && (
+                    <div class="row">
+                    <div class="col-md-6">
+                          <div class="mb-3">
+                            <label for="dateBaraat" class="form-label">
+                              <strong>Date for Baraat</strong>{" "}
+                            </label>
+                            <input
+                              type="date"
+                              class="form-control"
+                              id="dateBaraat"
+                              style={{ maxWidth: "500px" }}
+                            />
+                          </div>
+                        </div>
+
+                        <div class="col-md-6">
+                          <div class="mb-3">
+                            <label for="timeBaraat" class="form-label">
+                              <strong>Time for Baraat</strong>{" "}
+                            </label>
+                            <input
+                              type="time"
+                              class="form-control"
+                              id="timeBaraat"
+                              style={{ maxWidth: "500px" }}
+                            />
+                          </div>
+                        </div>
+                    </div>
+                  )}
+                  {checkedReception && (
+                    <div class="row">
+                    <div class="col-md-6">
+                          <div class="mb-3">
+                            <label for="dateReception" class="form-label">
+                              <strong>Date for Reception</strong>{" "}
+                            </label>
+                            <input
+                              type="date"
+                              class="form-control"
+                              id="dateReception"
+                              style={{ maxWidth: "500px" }}
+                            />
+                          </div>
+                        </div>
+
+                        <div class="col-md-6">
+                          <div class="mb-3">
+                            <label for="timeReception" class="form-label">
+                              <strong>Time for Reception</strong>{" "}
+                            </label>
+                            <input
+                              type="time"
+                              class="form-control"
+                              id="timeReception"
+                              style={{ maxWidth: "500px" }}
+                            />
+                          </div>
+                        </div>
+                    </div>
+                  )}
+                  {checkedPhera && (
+                    <div class="row">
+                    <div class="col-md-6">
+                          <div class="mb-3">
+                            <label for="datePhera" class="form-label">
+                              <strong>Date for Phera</strong>{" "}
+                            </label>
+                            <input
+                              type="date"
+                              class="form-control"
+                              id="datePhera"
+                              style={{ maxWidth: "500px" }}
+                            />
+                          </div>
+                        </div>
+
+                        <div class="col-md-6">
+                          <div class="mb-3">
+                            <label for="timePhera" class="form-label">
+                              <strong>Time for Phera</strong>{" "}
+                            </label>
+                            <input
+                              type="time"
+                              class="form-control"
+                              id="timePhera"
+                              style={{ maxWidth: "500px" }}
+                            />
+                          </div>
+                        </div>
+                    </div>
+                  )}
+                  {checkedTilak && (
+                    <div class="row">
+                    <div class="col-md-6">
+                          <div class="mb-3">
+                            <label for="dateTilak" class="form-label">
+                              <strong>Date for Tilak</strong>{" "}
+                            </label>
+                            <input
+                              type="date"
+                              class="form-control"
+                              id="dateTilak"
+                              style={{ maxWidth: "500px" }}
+                            />
+                          </div>
+                        </div>
+
+                        <div class="col-md-6">
+                          <div class="mb-3">
+                            <label for="timeTilak" class="form-label">
+                              <strong>Time for Tilak</strong>{" "}
+                            </label>
+                            <input
+                              type="time"
+                              class="form-control"
+                              id="timeTilak"
                               style={{ maxWidth: "500px" }}
                             />
                           </div>
@@ -924,37 +1232,19 @@ function Weddingform() {
                     {checkedWedding && (
                       <div class="col-md-6">
                         <div class="mb-3">
-                          <label for="exampleInput5" class="form-label"></label>
-                          <select
-                            id="exampleInput5"
-                            class="form-select mb-3"
-                            aria-label="Default select example"
-                          >
-                            <option selected value="1">
-                            Royal Wedding
-                            </option>
-                            <option value="2">Fairy Tale Wedding</option>
-                            <option value="3">Green/Forest Wedding</option>
-                            <option value="4">Beach  Wedding</option>
-                            <option value="5">Real Flowers Wedding</option>
-                            <option value="6">Artificial Flowers  Wedding</option>
-                            <option value="7">Indoor Wedding</option>
-                            <option value="8">Outdoor Wedding</option>
-                            <option value="9">Seasonal Wedding</option>
-                            <option value="10">Retro Wedding</option>
-                            <option value="11">Romantic Wedding</option>
-                            <option value="12">Single Colour theme Wedding</option>
-                            <option value="13">Multi Colour theme Wedding</option>
-                            <option value="14">Historical  Wedding</option>
-                            <option value="15">Dessert style Wedding</option>
-                            <option value="16">Musical theme Wedding</option>
-                            <option value="17">Cultural Wedding</option>
-                           
-                            
-                          </select>
+                          <div className="preview-values">
+                            {/* <h5><strong>Decoration</strong></h5> */}
+                            {Themeweddingvalue}
+                          </div>
+
+                          <MultiSelect
+                            onChange={handleOnchangeThemewedding}
+                            options={Themeweddingoptions}
+                          />
                         </div>
                       </div>
                     )}
+                   
                   </div>
                 </div>
               </div>
