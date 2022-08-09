@@ -36,49 +36,7 @@ function Birthdayform() {
                   /> */}
                   {/* <!-- Gallery --> */}
                   <div className="card example-1 mt-1 scrollbar-ripe-malinka">
-                    <div class="row">
-                      <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-                        <img
-                          src="https://bit.ly/3o6TYiy"
-                          class="w-100 shadow-4-strong rounded mb-4"
-                          alt="Boat on Calm Water"
-                        />
-
-                        <img
-                          src="https://bit.ly/3z90bkq"
-                          class="w-100 shadow-4-strong rounded mb-4"
-                          alt="Wintry Mountain Landscape"
-                        />
-                      </div>
-
-                      <div class="col-lg-4 mb-4 mb-lg-0">
-                        <img
-                          src="https://bit.ly/3ob4tkS"
-                          class="w-100 shadow-4-strong rounded mb-4"
-                          alt="Mountains in the Clouds"
-                        />
-
-                        <img
-                          src="https://bit.ly/3o6TYiy"
-                          class="w-100 shadow-4-strong rounded mb-4"
-                          alt="Boat on Calm Water"
-                        />
-                      </div>
-
-                      <div class="col-lg-4 mb-4 mb-lg-0">
-                        <img
-                          src="https://bit.ly/3PgTfar"
-                          class="w-100 shadow-4-strong rounded mb-4"
-                          alt="Waves at Sea"
-                        />
-
-                        <img
-                          src="https://bit.ly/3ceNueN"
-                          class="w-100 shadow-4-strong rounded mb-4"
-                          alt="Yosemite National Park"
-                        />
-                      </div>
-                    </div>
+                    
                     <div class="row">
                       <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
                         <img

@@ -34,6 +34,21 @@ const userSchema = new mongoose.Schema(
   }
 );
 
+const todoSchema = new mongoose.Schema({
+  userId : {
+    type: String,
+    required: true
+  },
+  todoText : {
+    type : String,
+    required : true
+  },
+},
+{
+  timestamps : true,
+}
+)
+
 userSchema.methods.generateAuthToken = function () {
   const jwtPrivateKey = process.env.jwtPrivateKey;
 
@@ -48,6 +63,7 @@ userSchema.methods.generateAuthToken = function () {
 };
 
 const User = mongoose.model("User", userSchema);
+const TodoText = mongoose.model("TodoText", todoSchema);
 
 const validateUser = (user) => {
   const schema = Joi.object({
@@ -60,4 +76,5 @@ const validateUser = (user) => {
 };
 
 exports.User = User;
+exports.TodoText = TodoText;
 exports.validate = validateUser;

@@ -6,6 +6,7 @@ import Register from "./components/Register/register";
 import Passwordreset from "./components/passwordReset/passwordReset";
 import NewPassword from "./components/newPassword/newPassword";
 import Account from "./components/Myprofile/account";
+// import Account from "./components/EventsPages/myprof";
 import Events from "./components/Event/events";
 import Becomevendor from "./components/BecomeVendor/becomevendor";
 import Birthday from "./components/EventsPages/birthday";
@@ -58,7 +59,7 @@ function App() {
         <Route path="/myacc" element={<Account />}></Route>
         <Route path="/birthday" element={<Birthday />}></Route>
         <Route path="/babyshower" element={<Babyshower />}></Route>
-        <Route path="/corporateevent" element={<Corporateevent />}></Route>
+        <Route path="/corporateevents" element={<Corporateevent />}></Route>
         <Route path="/engagement" element={<Engagement />}></Route>
         <Route path="/familyfunction" element={<Familyfunction />}></Route>
         <Route path="/postwedding" element={<Postwedding />}></Route>
@@ -67,6 +68,7 @@ function App() {
         <Route path="/register" element={<Register />}></Route>
         <Route path="/events" element={<Events />}></Route>
         <Route path="/becomevendor" element={<Becomevendor />}></Route>
+        <Route path="*" element={<Events />}></Route>
       </Routes>
     );
   } else {
