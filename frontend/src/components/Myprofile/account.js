@@ -1,141 +1,157 @@
-import axios from "axios";
-import React, { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
-import { authActions } from "../../store";
+import React from "react";
+import Todo from '../todo';
+
 import "./account.css";
-
-function Account() {
-  const [userid, setID] = useState("surya");
-  const [email, setEmail] = useState("surya");
-  const [username, setUsername] = useState("surya");
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    axios
-      .get("/api/profile")
-      .then((res) => {
-        console.log(res);
-        const { _id, email, username } = res.data.user;
-        setID(_id);
-        setEmail(email);
-        setUsername(username);
-
-      })
-      .catch((err) => {
-        localStorage.clear("bandhanUserToken");
-        dispatch(authActions.logout());
-        console.log(err);
-        navigate("/login")
-      });
-  });
-
+export default function Engagement() {
   return (
-    <div className="page-content page-container" id="page-content">
-      <div className="padding">
-        <div className="row container d-flex justify-content-center">
-          <div className="col-xl-6 col-md-12">
-            <div className="card user-card-full">
-              <div className="row m-l-0 m-r-0">
-                <div className="col-sm-4 bg-c-lite-green user-profile">
-                  <div className="card-block text-center text-white">
-                    <div className="m-b-25">
-                      <img
-                        src="https://img.icons8.com/bubbles/100/000000/user.png"
-                        className="img-radius"
-                        alt="User-Profile-Image"
-                      />
+    <div>
+      {/* <!-- Tabs navs --> */}
+      <ul class="nav nav-pills nav-fill mb-3" id="ex1" role="tablist">
+      <li class="nav-item" role="presentation">
+          <a
+            class="nav-link"
+            id="ex2-tab-3"
+            data-mdb-toggle="tab"
+            href="#ex2-tabs-3"
+            role="tab"
+            aria-controls="ex2-tabs-3"
+            aria-selected="false"
+          >
+            <span className=" fw-bolder">Event</span>
+          </a>
+        </li>
+        <li class="nav-item fw-bolder" role="presentation">
+          <a
+            class="nav-link active"
+            id="ex2-tab-1"
+            data-mdb-toggle="tab"
+            href="#ex2-tabs-1"
+            role="tab"
+            aria-controls="ex2-tabs-1"
+            aria-selected="true"
+          >
+            <span className="fw-bold">Profile</span>
+          </a>
+        </li>
+        <li class="nav-item fw-bolder" role="presentation">
+          <a
+            class="nav-link"
+            id="ex2-tab-1"
+            data-mdb-toggle="tab"
+            href="#ex6-tabs-6"
+            role="tab"
+            aria-controls="ex2-tabs-1"
+            aria-selected="true"
+          >
+            <span className="fw-bold">Points and Gift vouchers</span>
+          </a>
+        </li>
+        <li class="nav-item fw-bolder" role="presentation">
+          <a
+            class="nav-link"
+            id="ex2-tab-1"
+            data-mdb-toggle="tab"
+            href="#ex5-tabs-1"
+            role="tab"
+            aria-controls="ex2-tabs-1"
+            aria-selected="true"
+          >
+            <span className="fw-bold">Payment</span>
+          </a>
+        </li>
+
+        <li class="nav-item" role="presentation">
+          <a
+            class="nav-link"
+            id="ex2-tab-2"
+            data-mdb-toggle="tab"
+            href="#ex2-tabs-2"
+            role="tab"
+            aria-controls="ex2-tabs-2"
+            aria-selected="false"
+          >
+            <span className=" fw-bolder">ToDo's</span>
+          </a>
+        </li>
+      </ul>
+      {/* <!-- Tabs navs --> */}
+
+      {/* <!-- Tabs content --> */}
+      <div class="tab-content" id="ex2-content">
+        <div
+          class="tab-pane fade show active"
+          id="ex2-tabs-1"
+          role="tabpanel"
+          aria-labelledby="ex2-tab-1"
+        >
+          <div className="row mt-3">
+            <div className="col-md-5 ms-5">
+              <div class="card mb-9">
+                <div class="card-body">
+                  <div class="d-flex flex-column align-items-center text-center">
+                    <img
+                      src="https://bootdey.com/img/Content/avatar/avatar7.png"
+                      alt="Admin"
+                      class="rounded-circle"
+                      width="150"
+                    />
+                    <div class="mt-3">
+                      <h4>John Doe</h4>
+                      <p class="text-secondary mb-1">Full Stack Developer</p>
+                      <p class="text-muted font-size-sm">
+                        Bay Area, San Francisco, CA
+                      </p>
+                      <button class="btn btn-primary mt-1x">Follow</button>
+                      {/* <button class="btn btn-outline-primary">Message</button> */}
                     </div>
-                    <h6 className="f-w-600">{username}</h6>
-                    <p>Web Designer</p>
-                    <i className=" mdi mdi-square-edit-outline feather icon-edit m-t-10 f-16"></i>
-                  </div>
-                </div>
-                <div className="col-sm-8">
-                  <div className="card-block">
-                    <h6 className="m-b-20 p-b-5 b-b-default f-w-600">
-                      Information
-                    </h6>
-                    <div className="row">
-                      <div className="col-sm-6">
-                        <p className="m-b-10 f-w-600">Email</p>
-                        <h6 className="text-muted f-w-400">{email}</h6>
-                      </div>
-                      <div className="col-sm-6">
-                        <p className="m-b-10 f-w-600">userId</p>
-                        <h6 className="text-muted f-w-400">{userid}</h6>
-                      </div>
-                    </div>
-                    <h6 className="m-b-20 m-t-40 p-b-5 b-b-default f-w-600">
-                      Projects
-                    </h6>
-                    <div className="row">
-                      <div className="col-sm-6">
-                        <p className="m-b-10 f-w-600">Recent</p>
-                        <h6 className="text-muted f-w-400">Sam Disuja</h6>
-                      </div>
-                      <div className="col-sm-6">
-                        <p className="m-b-10 f-w-600">Most Viewed</p>
-                        <h6 className="text-muted f-w-400">Dinoter husainm</h6>
-                      </div>
-                    </div>
-                    <ul className="social-link list-unstyled m-t-40 m-b-10">
-                      <li>
-                        <a
-                          href="#!"
-                          data-toggle="tooltip"
-                          data-placement="bottom"
-                          title=""
-                          data-original-title="facebook"
-                          data-abc="true"
-                        >
-                          <i
-                            className="mdi mdi-facebook feather icon-facebook facebook"
-                            aria-hidden="true"
-                          ></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#!"
-                          data-toggle="tooltip"
-                          data-placement="bottom"
-                          title=""
-                          data-original-title="twitter"
-                          data-abc="true"
-                        >
-                          <i
-                            className="mdi mdi-twitter feather icon-twitter twitter"
-                            aria-hidden="true"
-                          ></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#!"
-                          data-toggle="tooltip"
-                          data-placement="bottom"
-                          title=""
-                          data-original-title="instagram"
-                          data-abc="true"
-                        >
-                          <i
-                            className="mdi mdi-instagram feather icon-instagram instagram"
-                            aria-hidden="true"
-                          ></i>
-                        </a>
-                      </li>
-                    </ul>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <div
+          class="tab-pane fade"
+          id="ex2-tabs-2"
+          role="tabpanel"
+          aria-labelledby="ex2-tab-2"
+        >
+          <Todo />
+        </div>
+        <div
+          class="tab-pane fade"
+          id="ex2-tabs-3"
+          role="tabpanel"
+          aria-labelledby="ex2-tab-3"
+        >
+          Event Info
+        </div>
+        <div
+          class="tab-pane fade"
+          id="ex6-tabs-6"
+          role="tabpanel"
+          aria-labelledby="ex2-tab-3"
+        >
+          Points 
+        </div>
+        <div
+          class="tab-pane fade"
+          id="ex5-tabs-1"
+          role="tabpanel"
+          aria-labelledby="ex2-tab-3"
+        >
+          payment 
+        </div>
+        <div
+          class="tab-pane fade"
+          id="ex2-tabs-3"
+          role="tabpanel"
+          aria-labelledby="ex2-tab-3"
+        >
+          Event info
+        </div>
       </div>
+      {/* <!-- Tabs content --> */}
     </div>
   );
 }
-
-export default Account;

@@ -33,8 +33,7 @@ router.post("/", async (req, res) => {
   const token = user.generateAuthToken();
 
   const foundUser = _.pick(user, ["_id", "username", "email"]);
-  // console.log(token);
-  console.log(new Date(Date.now()));
+  
   res
     // .cookie("Token", token, {expires: new Date(Date.now() + 10000), httpOnly: true })//86400000
     .cookie("bandhanUserToken", token, {expires: new Date(Date.now() + 19800000 + 120000 ) , httpOnly: true, sameSite:'none', secure: true })

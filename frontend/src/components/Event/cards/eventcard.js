@@ -315,7 +315,7 @@ function Eventcard() {
                       </div>
                       <div class="card-footer">
                         <div class="text-center">
-                          <Link to="/corporateevent">
+                          <Link to="/corporateevents">
                             <button className="btn btn-dark">
                               View Details
                             </button>
